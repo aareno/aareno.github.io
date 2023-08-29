@@ -1,0 +1,25 @@
+---
+layout: project
+type: project
+image: img/cotton/cotton-square.png
+title: "Record Database"
+date: 2022
+published: true
+labels:
+  - C++
+  - ICS212
+summary: "A database that stores the users name, address and account number."
+---
+
+```cpp
+void getaddress(char address[], int size)
+{
+  cout << "Please enter your address: \n"; 
+  cout << "Enter a ( / ) at the end of your address\n";
+
+  cin.get(address, size, '/');
+
+  cin.get();
+  cin.get();
+}
+```
