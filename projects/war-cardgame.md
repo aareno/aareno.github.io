@@ -7,7 +7,7 @@ date: 2021
 published: true
 labels:
   - Java
-  - ICS111
+  - ICS211
 summary: "A simple card game played by two players"
 ---
 
