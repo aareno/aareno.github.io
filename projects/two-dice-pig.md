@@ -2,13 +2,13 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "War: Card Game"
+title: "Two Dice Pig Game"
 date: 2021
 published: true
 labels:
   - Java
-  - ICS211
-summary: "A simple card game played by two players"
+  - ICS111
+summary: "A simple dice game played by two players"
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
