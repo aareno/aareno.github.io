@@ -11,6 +11,7 @@ labels:
 summary: "A program that can solve any sudoku problem."
 ---
 
-<img class="img-fluid" src="../img/sudoku-solver.png">
-
 Something Something
+
+<img class="resize" src="../img/sudoku-solver.png" style="width:400px; height:300px">
+
