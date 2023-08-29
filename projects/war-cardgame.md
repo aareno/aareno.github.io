@@ -2,13 +2,13 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+title: "War: Card Game"
+date: 2021
 published: true
 labels:
-  - Lisp
-  - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+  - Java
+  - ICS111
+summary: "A simple card game played by two players"
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
