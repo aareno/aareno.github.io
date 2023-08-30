@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/sudokuclip.png
 title: "Sudoku Solver"
 date: 2021
 published: true
