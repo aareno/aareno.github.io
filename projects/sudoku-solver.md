@@ -11,7 +11,7 @@ labels:
 summary: "A program that can solve any sudoku problem."
 ---
 
-This project is a program that can solve any sudoku problem. I made this project in my 2nd year at UH Manoa, in ICS211. Through this project I learned more about looping through two dimensional arrays and 
+This project is a program that can solve any sudoku problem. I made this project in my 2nd year at UH Manoa, in ICS211. Through this project I learned more about looping through two dimensional arrays and using recursion. I really enjoyed this project because it was fun to see that the program could solve any sudoku problem.
 
 ## What is sudoku?
 
