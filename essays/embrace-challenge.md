@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "Multilingual"
+title: "Embrace Challenge"
 # All dates must be YYYY-MM-DD format!
 date: 2023-08-29
 published: true
