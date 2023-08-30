@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/micromouse/micromouse-square.jpg
+image: img/database.png
 title: "Record Database"
 date: 2022
 published: true
