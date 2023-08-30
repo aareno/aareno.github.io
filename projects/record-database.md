@@ -13,7 +13,7 @@ summary: "A record database that stores a users name, address and account number
 
 In this project, I created a database that stores a users name, address and account number. The program opens with a user interface asking what the user wants to do (remove a record, read a record, or add a record). 
 
-This is what it would look like if you started the program:
+This is what the user interface does if you start the program:
 
 ```cpp
 Hello! Welcome to the bank!
