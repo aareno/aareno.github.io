@@ -10,9 +10,9 @@ labels:
   - Javascript
 ---
 
-## Interest
+## My thoughts on Javascript
 
-Some of my interest...
+  While using Javascript, it reminded me of using a mixture of python and Java. I've 
 
 ## Skills
 
