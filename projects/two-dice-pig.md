@@ -21,8 +21,6 @@ Rolling double 1's resets your whole score
 Rolling one 1 sets your turn score to 0
 Rolling doubles forces you to roll again
 
-# 
-
 ## How it works
 
 Using math.random, I was able to get the dice roll. By using if-else statements, I was able to set the rules of the game. Since this was a beginning level computer science course, the graphical interface was given to us from our instructor. 
