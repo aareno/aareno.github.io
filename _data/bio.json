@@ -44,13 +44,13 @@
   "work": [
     {
       "company": "",
-      "position": "",
+      "position": "None",
       "website": "",
       "startDate": "",
       "endDate": "",
       "summary": "",
       "highlights": [
-        ""
+        "",""
       ]
     }
   ],
@@ -58,13 +58,13 @@
     {
       "organization": "Hawaii Swim Club",
       "website": "",
-      "position": "Captain:",
+      "position": "Captain",
       "startDate": "2011-07-08",
       "endDate": "2021-06-28",
-      "summary": "Competitive Swimmer for a club",
+      "summary": "Competitive Swimming",
       "highlights": [
         "State championship winner (2017)",
-        "National qualifier (2021)"
+        "Junior National qualifier (2021)"
       ]
     },
         {
