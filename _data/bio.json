@@ -43,38 +43,49 @@
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
+      "company": "",
+      "position": "",
       "website": "",
-      "startDate": "2015-08-01",
-      "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        ""
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
+      "organization": "Hawaii Swim Club",
+      "website": "",
+      "position": "Captain:",
+      "startDate": "2011-07-08",
+      "endDate": "2021-06-28",
+      "summary": "Competitive Swimmer for a club",
       "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
+        "State championship winner (2017)",
+        "National qualifier (2021)"
+      ]
+    };
+        {
+      "organization": "University of Hawaii: Manoa",
+      "website": "https://hawaiiathletics.com/sports/mens-swimming-and-diving/roster/aaren-orquia/19737",
+      "position": "Swimmer (Butterfly)",
+      "startDate": "2021-08-017",
+      "endDate": "2022-06-28",
+      "summary": "Swimmer for UH Manoa",
+      "highlights": [
+        "Competed in the Mountain Pacific Sports Federation (MPSF) championships",
+        "Finished 5th in the 100 yard butterfly at the UNLV and Wyoming Tri-meet"
       ]
     }
   ],
   "awards": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+      "title": "MVP Award: Men's Swimming",
+      "date": "2017-2021",
+      "awarder": "Maui High School",
+      "summary": "Awarded to the most outstanding athlete in a season."
     }
   ],
   "references": [
