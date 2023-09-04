@@ -19,11 +19,11 @@ labels:
 
 Bad Question:
 
-https://stackoverflow.com/questions/77036272/how-to-open-windows-desktop-application-with-c-sharp
+This is the link to the problem: [Bad Question](https://stackoverflow.com/questions/77036272/how-to-open-windows-desktop-application-with-c-sharp)
 
 Good Question:
 
-https://stackoverflow.com/questions/8391411/how-to-block-calls-to-print
+This is the link to the problem:  [Good Question](https://stackoverflow.com/questions/8391411/how-to-block-calls-to-print)
 
 
   
