@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "Curiosity to Clarity"
 # All dates must be YYYY-MM-DD format!
-date: 2023-09-04
+date: 2023-09-05
 published: true
 labels:
   - Reflection
