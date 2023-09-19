@@ -13,7 +13,7 @@ labels:
 
 ## What is Coding Style?
 
-Coding style are guidelines that developers follow while writing code. The goal of coding style is to make code more readable and to keep consistency throughout different projects. By using coding style, developers can remove bad habits and gain good habits while writing code.
+Coding style are guidelines that developers follow while writing code. The goal of coding style is to make code more readable and to keep consistency throughout different projects. This is especially important in team based projects where multiple people are working on the same application. By using coding style, developers can remove bad habits and gain good habits while writing code. 
 
 ## Reflection
 
