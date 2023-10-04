@@ -23,3 +23,10 @@ UI frameworks offer a structured set of tools, components and designs to assist 
 
 In my opinion, I find using bootstrap very helpful and efficent, but it's also very confusing. There are so many different classes and functionality with UI frameworks that it's hard to know what to use in different situations. Through my time of recreating a website, I found myself getting stuck trying to place an image or text in the right position, it took me a while to finish the reacraetion, but I think if I recreated the website without bootstrap, it would've took even longer. Additionally, I think bootstrap allows for clearer and more readable code. Despite their initial complexity, I think it's very beneficially to learn in terms of efficency and responsiveness. 
 
+### Real Website
+<img src="../img/Real1.png" width="600px" height="300px">
+<img src="../img/Real2.png" width="600px" height="300px">
+
+### Recreation (using bootstrap)
+<img src="../img/Fake1.png" width="600px" height="300px">
+<img src="../img/Fake2.png" width="600px" height="300px">
