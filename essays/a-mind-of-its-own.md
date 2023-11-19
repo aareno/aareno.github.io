@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "A Mind of Its Own
+title: "A Mind of Its Own"
 # All dates must be YYYY-MM-DD format!
 date: 2023-11-18
 published: true
