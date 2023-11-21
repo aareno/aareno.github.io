@@ -17,9 +17,32 @@ Artificial Intelligence (AI) is a very useful tool that can change education by 
 
 ## Personal Experience with AI
 
-Through my experience with AI in WODs, I felt like I didn't need to use it. Most of the time I didn't feel the need to get help from AI because I felt like I should challenge myself. The times that I would use AI is if I was stuck or really needed help. For the experience WODs, I never used AI since there were screen cast on how to finish the WOD at the end and there was no time-limit. Similarly during In-class Practice WODs, I wouldn't use AI to challenge myself and to try to learn concepts more by myself. During In-class WODs, I only used AI when I was stuck or in a time crunch. I think that AI was really useful for WODs that involved writing algorithms, like the cities WOD where we had to use the underscore library to create two functions, one to find the average population of a island and the second to find the highest and lowest city populations. In this scenario, Co-pilot worked great by giving me a solution that worked, But In WODs where we had to set up a web page or create different features in an application (Ex: Buzz's steak house), I found that it wasn't very helpful because the criteria for the web page was more specific. 
+### 1 - Experience WODS 
+Through my experience with AI in WODs, I felt like I didn't need to use it. Most of the time I didn't feel the need to get help from AI because I felt like I should challenge myself. The times that I would use AI is if I was stuck or really needed help. For the experience WODs, I never used AI since there were screen cast on how to finish the WOD at the end and there was no time-limit. 
 
-I had the best experience with AI by asking for coding examples, asking what lines of code do and asking what problems I have in my code. When I had no idea on how to start or create a feature on my final project, I would use ChatGPT to give me an example code. Most of the time the example code didn't work with my application, but it gave me a good starting point that I would be able to build off of it. I had a similar experience while asking ChatGPT to write me an essay, I found that ChatGPT can be used to give you an outline, starting point or ideas, but I don't think it can be used to just copy and paste an essay. A positive about the example code that ChatGPT gives is that it usually comes with comments that cover what each line of code does. If there were lines of code I didn't understand in the example code, I would ask ChatGPT what the lines of code do. This helped me understand the code and concept of the functions used better. If I ever had errors in my code, I would try to figure out how to fix them on my own, But If I still can't figure it out, I ask ChatGPT. Sometimes It would give me the correct solution, but most times the solution wouldn't work. Through my experience of coding from ChatGPT, I think that it is a hit or miss, It either works or it doesn't.
+### 2 - In-class Practice WODS 
+Similarly during In-class Practice WODs, I wouldn't use AI to challenge myself and to try to learn concepts more by myself. 
+### 3 - In-class WODS
+During In-class WODs, I only used AI when I was stuck or in a time crunch. I think that AI was really useful for WODs that involved writing algorithms, like the cities WOD where we had to use the underscore library to create two functions, one to find the average population of a island and the second to find the highest and lowest city populations. In this scenario, Co-pilot worked great by giving me a solution that worked, But In WODs where we had to set up a web page or create different features in an application (Ex: Buzz's steak house), I found that it wasn't very helpful because the criteria for the web page was more specific. 
+### 4 - Essays
+I found that when I asked ChatGPT to write me an essay, It didn't write a good essay, but I think it can be used to give you an outline, starting point or ideas. I don't think it can be used to just copy and paste an essay.
+### 5 - Final Project
+I had the best experience with AI by asking for coding examples, asking what lines of code do and asking what problems I have in my code. When I had no idea on how to start or create a feature on my final project, I would use ChatGPT to give me an example code.
+### 6 -  Learning a concept / Tutorial
+When learning a concept, I think AI is very useful. I never asked it to explain specific topics to me, but when I asked it to give me examples of code, I think it really helped me to learn a concept faster.
+
+### 7 - Answering a question in class or discord / 8 - Smart Questions
+I never really used AI to ask or answer any question from in class or in discord. Usually, if questions are posted into discord, there are usually people that are able to help, so I didn't feel the need to use AI. Something that I wished I did is use AI to ask questions during class. I think it could be useful to understand a topic faster.
+
+### 9 - Coding Examples / 11- Writing Code
+Most of the time the example code didn't work with my application, but it gave me a good starting point that I would be able to build off of.
+### 10- Explaining Code
+If there were lines of code I didn't understand in the example code, I would ask ChatGPT what the lines of code do. I think it does a good job in explaining what code does. The explanation usually helped me understand the code and concept of the functions used better. 
+### 12- Documenting Code
+A positive about the example code that ChatGPT gives is that it usually comes with comments that cover what each line of code does. This ties in with the AI explaining code and helping me to better understand the code or concept.
+
+### 13- Quality Assurance
+If I ever had errors in my code, I would try to figure out how to fix them on my own, But If I still can't figure it out, I ask ChatGPT. Sometimes It would give me the correct solution, but most times the solution wouldn't work. Through my experience of coding from ChatGPT, I think that it is a hit or miss, It either works or it doesn't.
 
 
 ## Impact on Learning and Understanding
