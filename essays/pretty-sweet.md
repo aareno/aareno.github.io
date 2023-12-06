@@ -13,7 +13,7 @@ labels:
 
 ## Introduction
 
-Over the duration of this class, I have learned many principles of software engineering that I will be able to apply to my future career. In this essay, I will reflect on three concepts that I found very important in this class, agile project management, design patterns and ethics in software engineering. 
+Over the duration of this class, I have learned many principles of software engineering that I will be able to apply to my future career. This class has given me a brief overview of the process and work of creating a practical web application. I see the ending of this course as the beginning to my software engineering journey. In this essay, I will reflect on three concepts that I found very important in this class. 
 
 ### Agile Project Management
 
