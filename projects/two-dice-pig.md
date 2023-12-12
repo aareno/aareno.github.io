@@ -11,6 +11,8 @@ labels:
 summary: "A simple dice game played by two players"
 ---
 
+## Overview
+
 This project is a simple dice game called Two Dice Pig. This game is played by 2 people using a pair of dice. I wrote this program in my 1st year, in ICS111. This project includes a graphical interface. I like this project because it's really fun and it's what got me hooked to coding and programming. From this project, I learned how to use else-if statements and learned about using functions in javas library. 
 
 ## How to play
