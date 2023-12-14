@@ -21,7 +21,7 @@ Sudoku is a number puzzle played on a 9x9 grid. The goal is to fill in the grid 
 
 ### Preview
 
-<img alt="picture" class="resize" src="../img/sudoku-solver.png" style="width: 50%; height: 50%">
+<img alt="picture" class="resize" src="../img/sudoku-solver.png" style="width: 40%; height: 40%">
 
 ## How it works
 

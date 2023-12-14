@@ -27,10 +27,10 @@ Players Roll dice until the score is reached. Simple and Easy! :)
 
 ### Preview
 
-<img alt="picture" src="../img/twodicepig.png" style="width: 50%; height: 50%">
+<img alt="picture" src="../img/twodicepig.png" style="width: 40%; height: 40%">
 
 ## How it works
 
-The program works by using the math.random function to simulate a dice roll. To create the rules of the game, I used if-else statements. Since this was a beginning level computer science course, the graphical interface was given to us from our instructor. This program was simple but it was a fun introduction to programming.
+The program works by using the math.random function to simulate a dice roll. To create the rules of the game, I used if-else statements. For example, if both dice rolled 1, the users total score variable would be set to 0. Since this was a beginning level computer science course, the graphical interface was given to us from our instructor. This program was very simple but it was a fun introduction to programming.
 
 
