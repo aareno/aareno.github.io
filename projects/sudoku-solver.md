@@ -17,12 +17,15 @@ This project is a program that can solve any sudoku problem. I made this project
 
 ## What is sudoku?
 
-A 9x9 square must be filled with numbers 1-9 with no repeating numbers in each line, horizontally, vertically and in the same 3 x 3.
+Sudoku is a number puzzle played on a 9x9 grid. The goal is to fill in the grid with numbers from 1 to 9. Each row, column, and 3x3 subgrid must have every number exactly once. The puzzle starts with some numbers already filled in, and you need to use logic to complete the grid.
+
+### Preview
+
+<img alt="picture" class="resize" src="../img/sudoku-solver.png" style="width: 50%; height: 50%">
 
 ## How it works
 
-This program works by looping through the rows and column of the sudoku problem. Whenever there is a empty cell in the sudoku problem, a function to get the possible values were called. Each possible value is tested by checking if the same number is in the same row, column or 3 x 3, if all of these conditions are satisfied, the number is plotted. This process is repeated until the sudoku is solved.
+This program works by looping through the rows and column of the sudoku problem. Whenever there is an empty cell in the sudoku problem, a function to get the possible values for the cell is called. Each possible value is tested by checking if the same number is in the same row, column or 3 x 3, if all of these conditions are satisfied, the number is plotted. This process is repeated until the sudoku is solved. This program uses recursion and backtracking to solve each sudoku problem
 
-This is an example of my program solving a sudoku problem:
 
-<img alt="picture" class="resize" src="../img/sudoku-solver.png" style="width:400px; height:300px">
+
