@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/database.png
+image: img/cabletrack.png
 title: "CableTrack.Pro"
 date: 2023
 published: true
@@ -10,6 +10,8 @@ labels:
   - ICS314
 summary: "A record database that stores a users name, address and account number."
 ---
+
+<img alt="picture" src="../img/home page.png" style="width: 80%; height: 80%">
 
 ## Overview
 
@@ -23,6 +25,16 @@ My contributions to this project include:
 - Creating Project Pages (add project page, edit project page, view project page and the list project page).
 - Creating add, edit, view, list, delete features for projects.
 - Testcafe for Projects
+
+### Projects Page
+
+<img alt="picture" src="../img/list project.png" style="width: 80%; height: 80%">
+
+### Project View
+
+<img alt="picture" src="../img/view projects.png" style="width: 80%; height: 80%">
+
+
 
 
 ## What I learned
