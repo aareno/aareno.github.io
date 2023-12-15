@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Sudoku Solver | Aaren Orquia | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/aareno.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aaren Orquia | Professional Portfolio">
+    <meta property="og:url" content="https://aareno.github.io/projects/sudoku-solver.html">
+    <meta property="og:title" content="Sudoku Solver | Aaren Orquia | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/aareno.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Sudoku Solver | Aaren Orquia | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Aaren Orquia</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Sudoku Solver</h1>
+ <h2 id="overview">Overview</h2>
+
+<p>This project is a program that can solve any sudoku problem. I made this project in my 2nd year at UH Manoa, in ICS211. Through this project I learned more about looping through two dimensional arrays and using recursion. I really enjoyed this project because it was fun to see that the program could solve any sudoku problem.</p>
+
+<h2 id="what-is-sudoku">What is sudoku?</h2>
+
+<p>Sudoku is a number puzzle played on a 9x9 grid. The goal is to fill in the grid with numbers from 1 to 9. Each row, column, and 3x3 subgrid must have every number exactly once. The puzzle starts with some numbers already filled in, and you need to use logic to complete the grid.</p>
+
+<h3 id="preview">Preview</h3>
+
+<p><img alt="picture" class="resize" src="../img/sudoku-solver.png" style="width: 40%; height: 40%" /></p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>This program works by looping through the rows and column of the sudoku problem. Whenever there is an empty cell in the sudoku problem, a function to get the possible values for the cell is called. Each possible value is tested by checking if the same number is in the same row, column or 3 x 3, if all of these conditions are satisfied, the number is plotted. This process is repeated until the sudoku is solved. This program uses recursion and backtracking to solve each sudoku problem</p>
+
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
