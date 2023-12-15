@@ -43,14 +43,14 @@
   ],
   "work": [
     {
-      "company": "Eggs",
+      "company": "Ingenious Partners",
       "position": "Software Engineer",
-      "website": "",
-      "startDate": "",
+      "website": "The thing",
+      "startDate": "2023",
       "endDate": "",
       "summary": "Something",
       "highlights": [
-        "",""
+        "The highlight"
       ]
     }
   ],
