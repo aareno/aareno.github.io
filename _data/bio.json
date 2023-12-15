@@ -23,11 +23,23 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Java" ]
+      "keywords": [ "C", "C++", "Java", "Javascript", "Java", "Python", "CSS", "HTML" ]
+    },
+    {
+      "name": "Frameworks",
+      "keywords": [ "Node.js", "React.js", "Bootstrap", "Meteor" ]
+    },
+    {
+      "name": "Databases",
+      "keywords": ["MongoDB"]
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Windows", "Git/GitHub" ]
+      "keywords": [ "MacOS", "Windows", "Unix","Git/GitHub" ]
+    },
+    {
+    "name": "Testing/Deployment",
+    "keywords": [ "JUnit", "Testcafe" ]
     }
   ],
   "education": [
@@ -43,14 +55,42 @@
   ],
   "work": [
     {
-      "company": "Ingenious Partners",
+      "company": "CableTrack.Pro",
       "position": "Software Engineer",
-      "website": "The thing",
+      "website": "https://github.com/ingeniouspartners",
       "startDate": "2023",
       "endDate": "",
-      "summary": "Something",
+      "summary": "A web application to help electricians to quickly and easily create cable schedules for their projects | JavaScript, Meteor, MongoDB, React",
       "highlights": [
-        "The highlight"
+        "Companies can create projects that electricians can view to create cable schedules.",
+        "Application uses roles (only certain roles have access to some features).",
+        "Uses a Model-View-Controller design pattern."
+      ]
+    },
+    {
+      "company": "Record Database",
+      "position": "Software Engineer",
+      "website": "",
+      "startDate": "2022",
+      "endDate": "",
+      "summary": "A database that stores user information (records) into a file that can be edited | C++ |",
+      "highlights": [
+        "The program opens with a user interface asking what the user would like to do, add, remove or read a record.",
+        "Based on the user's choice, the program will complete it. The file storing the records changes if the user adds or removes a record.",
+        "The database is saved every time a user quits the program or changes the database."
+      ]
+    },
+    {
+      "company": "Sudoku Solver",
+      "position": "Software Engineer",
+      "website": "",
+      "startDate": "2022",
+      "endDate": "",
+      "summary": "A Sudoku solver that can solve any sudoku problem | Java |",
+      "highlights": [
+        "The program is given three 3x3 matrices with some missing values.",
+        "The goal of the sudoku solver is to fill the 9x9 square with numbers 1-9 with no repeating numbers in each line, horizontally, vertically and in the same 3x3.",
+        "The algorithm uses recursion to find possible values, plugging them in recursively until all three conditions are met."
       ]
     }
   ],
