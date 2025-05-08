@@ -19,4 +19,8 @@ jobs:
       - uses: limitusus/json-syntax-check@v1
         with:
           pattern: "\\bio.json$"
-      - uses: helaili/jekyll-action@v2 
+      - uses: helaili/jekyll-action@2.5.0    # Fixed version number
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            target_branch: 'gh-pages'
+            pre_build_commands: gem update --system 3.3.22  # Add this line to update RubyGems
