@@ -1,12 +1,8 @@
-<div style="background-color: var(--tf-projects-bg-color)" class="bg-gradient py-3" id="projects">
+<section class="projects-section py-5" id="projects">
   <div class="container">
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <h1 class="display-4 text-start">Projects</h1>
-      </div>
-    </div>
-
-    <div class="vstack gap-3">
+    <h2 class="section-heading mb-5">Featured Projects</h2>
+    
+    <div class="projects-grid">
       {% assign project_pages = site.pages | where: "type", "project" | sort: "date" | reverse %}
       {% for page in project_pages %}
         {% unless page.draft %}
@@ -19,8 +15,80 @@
     </div>
 
     {% if project_pages.size > include.limit %}
-      <p class="text-center pt-4"><a href="{{ site.baseurl}}/projects/">See all {{ project_pages.size }} projects</a></p>
+      <div class="text-center mt-5">
+        <a href="{{ site.baseurl}}/projects/" class="view-all-link">See all {{ project_pages.size }} projects</a>
+      </div>
     {% endif %}
-
   </div>
-</div>
+</section>
+
+<style>
+  .projects-section {
+    background-color: var(--bg-color, #121212);
+    color: var(--text-color, #f5f5f5);
+    padding: 5rem 5%;
+  }
+  
+  .projects-section .container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color, #f5f5f5);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color, #64ffda);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fixed 3-column layout */
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  @media (max-width: 1200px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .view-all-link {
+    display: inline-block;
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--accent-color, #64ffda);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .view-all-link:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    text-decoration: none;
+  }
+</style>

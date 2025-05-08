@@ -1,12 +1,122 @@
-<header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}">{{ site.data.bio.basics.name }}</a>
-    <div class="ms-auto">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <a class="nav-link" href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a>
-        <a class="nav-link" href="{{ '/#essays' | prepend: site.baseurl }}">Essays</a>
-        <a class="nav-link" href="{{ '/resume.html' | prepend: site.baseurl }}">Resume</a>
-      </ul>
+<header class="portfolio-header">
+  <div class="header-container">
+    <div class="content-wrapper">
+      <a class="logo" href="{{ '/' | prepend: site.baseurl }}">{{ site.data.bio.basics.name }}</a>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="{{ '/#about' | prepend: site.baseurl }}" class="nav-item">About</a></li>
+          <li><a href="{{ '/#projects' | prepend: site.baseurl }}" class="nav-item">Projects</a></li>
+          <li><a href="{{ '/#experience' | prepend: site.baseurl }}" class="nav-item">Experience</a></li>
+          <li><a href="{{ '/resume.html' | prepend: site.baseurl }}" class="nav-item">Resume</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  .portfolio-header {
+    background-color: var(--bg-color, #121212);
+    padding: 2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border: none !important; /* Force remove any border */
+    border-bottom: none !important; /* Specifically target bottom border */
+    box-shadow: none !important; /* Remove any shadow */
+    outline: none !important; /* Remove any outline */
+    /* Add specific styling to ensure no line appears */
+    position: relative;
+  }
+  
+  /* Remove any potential pseudo-elements that might create lines */
+  .portfolio-header::after,
+  .portfolio-header::before {
+    display: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 0 !important;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 5%;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    margin-right: 3rem; /* Add space between logo and navigation */
+  }
+  
+  .main-nav {
+    /* Remove margin-left: auto to keep navigation on the left */
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    color: var(--text-color, #f5f5f5);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+  
+  .nav-item:hover {
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+  }
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color, #64ffda);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 1rem;
+    }
+    
+    .portfolio-header {
+      padding: 1rem 5%;
+    }
+  }
+</style>

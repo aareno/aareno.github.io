@@ -1,47 +1,147 @@
-<div style="background-color: var(--tf-page-bg-color)" class="bg-gradient py-3">
-  <div class="container">
+<div class="about-section py-5" id="about">
+  <div class="container px-0">
+    <h2 class="section-heading mb-5">About Me</h2>
     <div class="row">
-      <div class="col-lg-4">
-        <img width="300px" src="{{ site.data.bio.basics.picture }}" class="d-block mx-auto rounded-circle">
-      </div>
       <div class="col-lg-8">
-        <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
-        <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
-        <p class="lead">{{ site.data.bio.basics.summary }}</p>
-        <hr class="my-4">
-        <p class="lead m-0">
-          Interests:
-          {% for interest in site.data.bio.interests %}
-          {{ interest.name }}{% if forloop.last != true %}, {% endif %}
-          {% endfor %}
-        </p>
-        <hr class="my-4">
-        <div class="row">
-
+  
+        <p class="role-text mb-4">{{ site.data.bio.basics.label }}</p>
+        <p class="about-text">{{ site.data.bio.basics.summary }}</p>
+        <p class="about-text">Testing</p>
+        
+        <div class="interests-section mt-4 mb-4">
+          <h3 class="mb-3">Interests</h3>
+          <div class="interests-container">
+            {% for interest in site.data.bio.interests %}
+            <span class="interest-tag">{{ interest.name }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        
+        <div class="social-links-container mt-5">
           {% if site.data.bio.basics.website %}
             {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name='house' %}
+            <div class="social-link-wrapper">
+              {% include about/social.html url=url name='house' label='Website' %}
             </div>
           {% endif %}
 
           {% if site.data.bio.basics.email %}
             {% capture url %}mailto:{{ site.data.bio.basics.email }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name='envelope' %}
+            <div class="social-link-wrapper">
+              {% include about/social.html url=url name='envelope' label='Email' %}
             </div>
           {% endif %}
 
           {% for profile in site.data.bio.basics.profiles %}
             {% capture url %}{{ profile.url }}{% endcapture %}
             {% capture name %}{{ profile.network | downcase }}{% endcapture %}
-            <div class="col text-center">
-              {% include about/social.html url=url name=name %}
+            <div class="social-link-wrapper">
+              {% include about/social.html url=url name=name label=profile.network %}
             </div>
           {% endfor %}
-
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-start">
+        <div class="profile-img-container">
+          <img src="{{ site.data.bio.basics.picture }}" class="profile-img">
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .about-section {
+    background-color: var(--bg-color, #121212);
+    color: var(--text-color, #f5f5f5);
+    padding: 5rem 5%;
+  }
+  
+  .about-section .container {
+    max-width: 1200px;
+    margin-left: 0;
+  }
+  
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color, #f5f5f5);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color, #64ffda);
+  }
+  
+  .profile-img-container {
+    width: 250px;
+    height: 250px;
+    margin: 50px 0 0 auto; /* Added top margin to lower the image */
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-img-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .role-text {
+    color: var(--accent-color, #64ffda);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--muted-text, #a0a0a0);
+    max-width: 700px;
+  }
+  
+  .interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .interest-tag {
+    background-color: var(--secondary-bg, #1e1e1e);
+    color: var(--accent-color, #64ffda);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .interest-tag:hover {
+    transform: translateY(-2px);
+  }
+  
+  .social-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .social-link-wrapper {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+</style>

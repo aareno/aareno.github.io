@@ -1,0 +1,103 @@
+<section class="experiences-section py-5" id="experiences">
+  <div class="container">
+    <h2 class="section-heading mb-5">Work Experience</h2>
+    
+    <div class="row g-3">
+      {% assign experience_pages = site.pages | where: "type", "experience" | where_exp: "item", "item.url contains '/experiences/'" | sort: "date" | reverse %}
+      {% for page in experience_pages %}
+        {% unless page.draft %}
+          <div class="col-md-6 col-lg-4">
+            {% include experiences/experience-card.html page=page %}
+          </div>
+        {% endunless %}
+        {% if forloop.index == include.limit %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if experience_pages.size == 0 %}
+      <!-- Sample experience card - only shown when no real entries exist -->
+      <div class="col-md-6 col-lg-4">
+        <div class="experience-card">
+          <div class="experience-card-content">
+            <div class="experience-header">
+              <h3 class="experience-title">Software Engineer <span class="company">@ CableTrack.Pro</span></h3>
+              <span class="experience-date">January 2023 - Present</span>
+            </div>
+            
+            <p class="experience-summary">Developed a web application to help electricians create cable schedules for their projects.</p>
+            
+            <div class="experience-tags">
+              <span class="experience-tag">JavaScript</span>
+              <span class="experience-tag">React</span>
+              <span class="experience-tag">MongoDB</span>
+            </div>
+            
+            <a href="/projects/cable-track-pro.html" class="read-more-link">View Details</a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if experience_pages.size > include.limit %}
+      <div class="text-center mt-5">
+        <a href="{{ site.baseurl}}/experiences/" class="view-all-link">See all {{ experience_pages.size }} experiences</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .experiences-section {
+    background-color: var(--bg-color, #121212);
+    color: var(--text-color, #f5f5f5);
+    padding: 5rem 0;
+  }
+  
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color, #f5f5f5);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color, #64ffda);
+  }
+  
+  .experiences-container {
+    max-width: 900px;
+  }
+  
+  .experiences-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .view-all-link {
+    display: inline-block;
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--accent-color, #64ffda);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .view-all-link:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    text-decoration: none;
+  }
+</style>

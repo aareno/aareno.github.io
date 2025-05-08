@@ -1,0 +1,177 @@
+---
+layout: home
+---
+
+<section class="experience-detail-section py-5">
+  <div class="container">
+    <div class="experience-container">
+      <div class="experience-header">
+        <div class="title-area">
+          <h1 class="experience-title">{{ page.title }}</h1>
+          {% if page.company %}<h2 class="experience-company">{{ page.company }}</h2>{% endif %}
+          {% if page.location %}<p class="experience-location">{{ page.location }}</p>{% endif %}
+        </div>
+        {% if page.date %}
+        <div class="date-area">
+          <p class="date">{{ page.date | date: "%b %Y" }}{% if page.endDate %} - {{ page.endDate | date: "%b %Y" }}{% else %} - Present{% endif %}</p>
+        </div>
+        {% endif %}
+      </div>
+      
+      {% if page.responsibilities and page.responsibilities.size > 0 %}
+      <div class="experience-responsibilities">
+        <h3 class="responsibilities-heading">Key Responsibilities</h3>
+        <ul class="responsibilities-list">
+          {% for responsibility in page.responsibilities %}
+            <li>{{ responsibility }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      
+      <div class="experience-content">
+        {{ content }}
+      </div>
+      
+      {% if page.labels.size > 0 %}
+      <div class="experience-tags mt-4">
+        {% for label in page.labels %}
+        {% if label != "" %}
+        <span class="experience-tag">{{ label }}</span>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience-detail-section {
+    background-color: var(--bg-color, #121212);
+    color: var(--text-color, #f5f5f5);
+    padding: 5rem 0;
+  }
+  
+  .experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+  }
+  
+  .experience-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color, #f5f5f5);
+  }
+  
+  .experience-company {
+    font-size: 1.5rem;
+    color: var(--accent-color, #64ffda);
+    margin-bottom: 0.25rem;
+  }
+  
+  .experience-location {
+    font-size: 1.1rem;
+    color: var(--muted-text, #a0a0a0);
+  }
+  
+  .date-area {
+    text-align: right;
+  }
+  
+  .date {
+    font-size: 1.1rem;
+    color: var(--muted-text, #a0a0a0);
+  }
+  
+  .experience-responsibilities {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .responsibilities-heading {
+    font-size: 1.4rem;
+    color: var(--text-color, #f5f5f5);
+    margin-bottom: 1rem;
+  }
+  
+  .responsibilities-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--muted-text, #a0a0a0);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .responsibilities-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--muted-text, #a0a0a0);
+  }
+  
+  .experience-content h2,
+  .experience-content h3,
+  .experience-content h4 {
+    color: var(--text-color, #f5f5f5);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-content p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-content ul,
+  .experience-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .experience-content li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 3rem;
+  }
+  
+  .experience-tag {
+    background-color: var(--secondary-bg, #1e1e1e);
+    color: var(--accent-color, #64ffda);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .experience-tag:hover {
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .experience-header {
+      flex-direction: column;
+    }
+    
+    .date-area {
+      text-align: left;
+      margin-top: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,166 @@
+<div class="experience-card">
+  <div class="experience-card-content">
+    <div class="experience-header">
+      <h3 class="experience-title">{{ include.page.title }}</h3>
+      <span class="experience-date">
+        {{ include.page.date | date: "%b %Y" }}{% if include.page.endDate %} - {{ include.page.endDate | date: "%b %Y" }}{% else %} - Present{% endif %}
+      </span>
+    </div>
+    
+    <h4 class="experience-company">{{ include.page.company }}</h4>
+    <div class="experience-location">{{ include.page.location }}</div>
+    
+    <p class="experience-summary">{{ include.page.summary }}</p>
+
+    {% if include.page.responsibilities %}
+    <div class="experience-responsibilities">
+      <h5 class="responsibilities-heading">Responsibilities:</h5>
+      <ul class="responsibilities-list">
+        {% for item in include.page.responsibilities %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if include.page.labels %}
+    <div class="experience-tags">
+      {% for label in include.page.labels %}
+        {% if label != "" %}
+        <span class="experience-tag">{{ label }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .experience-card {
+    background-color: var(--secondary-bg, #1e1e1e);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .experience-card-content {
+    padding: 1.5rem;
+  }
+  
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-title {
+    color: var(--text-color, #f5f5f5);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .experience-date {
+    color: var(--accent-color, #64ffda);
+    font-size: 0.9rem;
+  }
+  
+  .experience-company {
+    color: var(--text-color, #f5f5f5);
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+  
+  .experience-location {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-summary {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-responsibilities {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .responsibilities-heading {
+    color: var(--text-color, #f5f5f5);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .responsibilities-list {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin: 0;
+    color: var(--muted-text, #a0a0a0);
+  }
+  
+  .responsibilities-list li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-content {
+    margin-top: 1rem;
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-tag {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--accent-color, #64ffda);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+  }
+  
+  .experience-additional {
+    margin-top: 1.5rem;
+    color: var(--muted-text, #a0a0a0);
+  }
+  
+  .experience-additional h2 {
+    color: var(--text-color, #f5f5f5);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .experience-additional ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-additional li {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+</style>

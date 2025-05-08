@@ -2,9 +2,153 @@
 layout: home
 ---
 
-<div class="container py-4">
-  <h1 class="display-4">{{ page.title }}</h1>
-  <span class="date">{{ page.date | date_to_string }}</span>
-  <hr>
-  {{ content }}
-</div>
+<section class="experience-section py-5">
+  <div class="container">
+    <h2 class="section-heading mb-5">Essays</h2>
+    
+    <div class="experience-container">
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>{{ page.title }} {% if page.company %}<span class="company">@ {{ page.company }}</span>{% endif %}</h3>
+          <span class="date">{{ page.date | date_to_string }}</span>
+        </div>
+        <div class="experience-content">
+          {{ content }}
+        </div>
+        
+        {% if page.labels.size > 0 %}
+        <div class="essay-labels mt-4">
+          {% for label in page.labels %}
+          {% if label != "" %}
+          <span class="essay-tag">{{ label }}</span>
+          {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience-section {
+    background-color: var(--bg-color, #121212);
+    color: var(--text-color, #f5f5f5);
+    padding: 5rem 0;
+  }
+  
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color, #f5f5f5);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color, #64ffda);
+  }
+  
+  .experience-container {
+    max-width: 800px;
+  }
+  
+  .experience-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .experience-item:last-child {
+    border-bottom: none;
+  }
+  
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .experience-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .company {
+    color: var(--accent-color, #64ffda);
+  }
+  
+  .date {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.9rem;
+  }
+  
+  .experience-content {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .experience-content ul {
+    padding-left: 1.2rem;
+  }
+  
+  .experience-content li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .essay-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .essay-tag {
+    background-color: var(--secondary-bg, #1e1e1e);
+    color: var(--accent-color, #64ffda);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .essay-tag:hover {
+    transform: translateY(-2px);
+  }
+  
+  .experience-content h1, 
+  .experience-content h2, 
+  .experience-content h3, 
+  .experience-content h4 {
+    color: var(--text-color, #f5f5f5);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .experience-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .experience-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

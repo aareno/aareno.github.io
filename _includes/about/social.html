@@ -1,6 +1,27 @@
-<a href="{{ include.url }}" target="_blank">
+<a href="{{ include.url }}" target="_blank" class="social-link" aria-label="{{ include.label }}">
   <svg class="tf-social">
     <use xlink:href="{{ '/img/bootstrap-icons.svg' | prepend: site.baseurl }}#{{- include.name -}}"/>
   </svg>
   <span>{{ include.label }}</span>
 </a>
+
+<style>
+  .social-link {
+    color: var(--text-color, #f5f5f5);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .social-link:hover {
+    color: var(--accent-color, #64ffda);
+  }
+  
+  .tf-social {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+</style>
