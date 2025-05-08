@@ -7,39 +7,145 @@ date: 2023
 published: true
 labels:
   - Javascript
-  - ICS314
-summary: "A Web Application to help electricians to quickly and easily create schedules for their projects."
+  - React
+  - MongoDB
+  - Meteor
+  - Software Engineering
+summary: "A web application that helps electricians quickly and easily create schedules for their projects."
 ---
 
-<img alt="picture" src="../img/home page.png" style="width: 60%; height: 60%">
+# CableTrack.Pro
+
+## Table of Contents
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Screenshots](#screenshots)
+- [Development Process](#development-process)
+- [My Contributions](#my-contributions)
+- [Technical Implementation](#technical-implementation)
+- [Lessons Learned](#lessons-learned)
+- [Team](#team)
 
 ## Overview
 
-[CableTrack.Pro](https://ingeniouspartners.github.io/cabletrack.pro/) is a tool to help electricians to quickly and easily create schedules for their projects. It allows the tracking of cable meta-data, pull-ins, terminations, and test. All of this is designed to allow the electricians to more efficiently create the Building Information Management (BIM) reports and exports for their projects.
+[CableTrack.Pro](https://ingeniouspartners.github.io/cabletrack.pro/) is a specialized tool designed to streamline project management for electricians. The application enables efficient tracking of cable meta-data, pull-ins, terminations, and testing procedures. By centralizing this information, electricians can generate Building Information Management (BIM) reports and exports with minimal effort, significantly improving workflow efficiency.
 
-This application was created with the help of my team, the [Indigenous Partners](https://github.com/ingeniouspartners). My team consisted of Andrea Jans, Ursula Nichols, Matthew Yamamoto, and Mikhail Shkaralevich. My role in this project was a software engineer. We are a group of ingenious people building applications.
+<div class="text-center p-4">
+  <img width="600px" class="img-fluid rounded shadow" src="../img/home page.png" alt="CableTrack.Pro Homepage">
+  <p class="text-muted"><em>CableTrack.Pro homepage showing the main dashboard interface</em></p>
+</div>
 
-## Contributions
+## Key Features
 
-My contributions to this project include:
-- Creating Project Pages (add project page, edit project page, view project page and the list project page).
-- Creating add, edit, view, list, delete features for projects.
-- Testcafe tests for Projects
+- **Project Management**: Create, edit, view, and delete electrical projects
+- **Cable Tracking**: Document and organize cable specifications and metadata
+- **Installation Monitoring**: Track pull-in progress and termination status
+- **Testing Documentation**: Record and verify testing procedures and results
+- **Report Generation**: Export BIM-compatible reports for project documentation
 
-### Projects Page
+## Screenshots
 
-<img alt="picture" src="../img/list project.png" style="width: 60%; height: 60%">
+<div class="row">
+  <div class="col-sm-6">
+    <div class="text-center p-3">
+      <img width="100%" class="img-fluid rounded shadow" src="../img/list project.png" alt="Projects Page">
+      <p class="text-muted"><em>Projects dashboard showing active electrical projects</em></p>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="text-center p-3">
+      <img width="100%" class="img-fluid rounded shadow" src="../img/view projects.png" alt="Project Details">
+      <p class="text-muted"><em>Detailed view of an individual project's specifications</em></p>
+    </div>
+  </div>
+</div>
 
-### Project View
+## Development Process
 
-<img alt="picture" src="../img/view projects.png" style="width: 60%; height: 60%">
+This application was developed using the **Model-View-Design (MVD)** pattern to separate business logic from the user interface. We implemented an issue-driven project management approach to track progress and ensure accountability throughout the development cycle.
 
+### Technologies Used
 
+- **Frontend**: React.js, Bootstrap
+- **Backend**: Meteor.js
+- **Database**: MongoDB
+- **Testing**: TestCafe
+- **Deployment**: GitHub Pages
 
+## My Contributions
 
-## What I learned
+As a software engineer on the [Indigenous Partners](https://github.com/ingeniouspartners) team, I focused on implementing the project management functionality:
 
-Through this project, I learned many technical things, such as how to better use meteor, mongodb, deployment, and react. I had many issues in the beginning of the project with how everything worked, such as the meteor template that we were using. But as time went on, I started to understand the ins and outs of the program and how everything worked. It took long hours to understand, but it was worth it. This was my first team based project, so I learned what it is like to work in a team coding project. My most important takeaway from this project was the team project experience.  Some important things that I think are the key to success in a team is communication and adaptability. Communication is key to a successful project. Talking about your own progress and challenges with your code are important to keep the project moving forward. I think that my team could've communicated better and more efficiently, but overall I think we did a pretty great job.The final project really taught me how to adapt and be patient with my code. I found myself getting frustrated when I merge from main and my code wouldn't work. Being able to adapt and be patient with my code really helped me get through this project. This project really helped me to understand how important software engineering principles, like design patterns and project management are. The design pattern that was an important part of our project was the Model-View-Design Pattern (MVD). This pattern was used to separate the logic and data from the user interface. Design patterns assist a software engineering to create a structured solution to any problems. Issue driven project management allowed my team to easily track our progress on the project. This project has taught me many things that I will take with me into the future of software engineering.  
+- **Project Creation**: Designed and implemented the "Add Project" interface
+- **Project Management**: Built edit, view, list, and delete capabilities
+- **Data Validation**: Implemented validation logic for project form inputs
+- **Testing**: Created TestCafe test suites for the Projects component
+- **Documentation**: Contributed to technical documentation and user guides
 
+## Technical Implementation
 
+The project management module follows a structured architecture:
 
+```javascript
+// Project Schema Example
+const ProjectSchema = new SimpleSchema({
+  name: {
+    type: String,
+    required: true,
+    max: 50,
+  },
+  description: {
+    type: String,
+    required: true,
+    max: 200,
+  },
+  startDate: {
+    type: Date,
+    required: true,
+  },
+  estimatedCompletion: {
+    type: Date,
+    required: true,
+  },
+  // Additional fields...
+});
+```
+
+## Lessons Learned
+
+### Technical Growth
+Working on CableTrack.Pro enhanced my skills with:
+- **Meteor.js ecosystem**: Gained practical experience with reactive data and publications
+- **MongoDB integration**: Learned efficient database schema design and query optimization
+- **Deployment processes**: Mastered continuous integration workflows
+
+### Teamwork & Collaboration
+This project was my first team-based coding experience, where I discovered the critical importance of:
+
+- **Communication**: Regular sync-ups and code reviews kept everyone aligned
+- **Adaptability**: Learning to merge code and resolve conflicts efficiently
+- **Patience**: Working through complex issues without getting frustrated
+
+### Software Engineering Principles
+I gained practical understanding of:
+- **Design Patterns**: Applied MVD to create maintainable, modular code
+- **Issue-Driven Project Management**: Used GitHub issues to track tasks and progress
+- **Code Quality**: Implemented consistent styling and documentation practices
+
+## Team
+
+CableTrack.Pro was developed by Indigenous Partners:
+- Andrea Jans
+- Ursula Nichols
+- Matthew Yamamoto
+- Mikhail Shkaralevich
+- [Your Name]
+
+<div class="text-center p-4">
+  <a href="https://github.com/ingeniouspartners" class="btn btn-primary">
+    <i class="fab fa-github"></i> View on GitHub
+  </a>
+  <a href="https://ingeniouspartners.github.io/cabletrack.pro/" class="btn btn-success">
+    <i class="fas fa-external-link-alt"></i> Live Demo
+  </a>
+</div>

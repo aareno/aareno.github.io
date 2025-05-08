@@ -4,7 +4,7 @@ type: project
 image: img/sudokuclip2.png
 title: "Sudoku Solver"
 date: 2021
-published: true
+published: false
 labels:
   - Java
   - ICS211

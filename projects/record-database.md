@@ -4,7 +4,7 @@ type: project
 image: img/database.png
 title: "Record Database"
 date: 2022
-published: true
+published: false
 labels:
   - C++
   - ICS212

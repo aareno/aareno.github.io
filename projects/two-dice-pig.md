@@ -4,7 +4,7 @@ type: project
 image: img/twodice.png
 title: "Two Dice Pig Game"
 date: 2021
-published: true
+published: false
 labels:
   - Java
   - ICS111
