@@ -6,7 +6,7 @@ url: "https://aareno.github.io"
 # Edit next line so that baseurl is "" if your repo is <username>.github.io
 baseurl: ""
 # Add repository information for GitHub metadata
-repository: "aareno/aareno.github.io"
+repository: "aareno.github.io"
 
 # OPTIONAL CHANGES
 ## Specify the theme using any of the css files in css/techfolio-theme
