@@ -1,117 +1,304 @@
 ---
 layout: project
 type: project
-image: img/into-the-shadows-logo.png
-title: "Identifier Name Plugin"
+image: img/ics.png
+title: "Identifier Name IDE Plugin"
 date: 2025
 published: true
 labels:
   - Java
   - Kotlin
   - Gradle
-  - UI
-  - Intellij IDE
-summary: "An IntelliJ platform plugin that visually organize and categorizes code identifiers for improved navigation."
+  - IntelliJ Platform
+  - Static Analysis
+summary: "An IntelliJ platform plugin that visually organizes and analyzes code identifiers to improve code quality and navigation."
 ---
 
-# Into the Shadows
-
 <div class="text-center p-4">
-  <img width="700px" class="img-fluid rounded shadow" src="../img/into-the-shadows-logo.png" alt="Into the Shadows Logo">
-  <h3 class="mt-3">A thrilling race to the center — with a monster by your side.</h3>
+  <img width="700px" class="img-fluid rounded shadow" src="../img/ics.png" alt="Identifier Name IDE Plugin">
+  <h3 class="mt-3">Improving code quality through identifier analysis</h3>
 </div>
 
-## Table of Contents
-- [Game Pitch](#game-pitch)
-- [Game Trailer](#game-trailer)
-- [Play the Demo](#play-the-demo)
-- [Game Design & Art](#game-design--art)
-- [What's Next](#whats-next)
-- [Development Team](#development-team)
-- [Technical Details](#technical-details)
+<nav class="minimal-nav">
+  <a href="#overview">Overview</a>
+  <a href="#features">Features</a>
+  <a href="#methodology">Methodology</a>
+  <a href="#challenges">Challenges</a>
+  <a href="#tools">Tools</a>
+  <a href="#team">Team</a>
+</nav>
 
-## Game Pitch
+## Overview
 
-***Into The Shadows*** is a fast-paced multiplayer horror puzzle game where players must escape a dark maze while being relentlessly hunted by AI-controlled monsters. Each match pits up to four players against a terrifying AI that won't stop until you're eliminated.
+The Identifier Name IDE Plugin enhances code quality by analyzing how developers name variables, methods, and classes within their software projects. Identifiers contribute approximately 70% of source code and serve as critical documentation that conveys developer intent. The plugin provides visualization tools for identifier naming patterns, detects naming violations, and suggests improvements, enabling developers to maintain consistent coding standards and improve code readability.
 
-Players choose both a character and a monster partner, each with their own future special abilities and spawn on the edge of a procedurally generated maze. Your goal? Navigate the maze, avoid being hunted, and find the hidden door in the center to escape.
+## Features
 
-Use strategy and tools like shotguns to distract or slow the monster, but be warned: getting caught a few times means you're out. Fast-paced matches lasting 5–10 minutes make this the perfect game for speedrunners, horror fans, and competitive players alike. Earn gold, unlock new characters, monsters, and prepare for a ranked system and additional upgrades in future updates.
-
-**Will you find the door, or will the shadows find you?**
-
-## Game Trailer
-
-<div class="video-container text-center my-4">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item rounded shadow" src="https://www.youtube.com/embed/placeholder" allowfullscreen></iframe>
+<div class="features-grid">
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-chart-bubble text-accent"></i>
+    </div>
+    <h4>Bubble Chart Visualization</h4>
+    <p>Displays an interactive bubble chart that highlights identifier naming patterns, organized by categories of identifiers. Each bubble corresponds to a specific set of identifiers, with tooltips that provide more details about the set.</p>
   </div>
-  <p class="text-muted mt-2"><em>See our gameplay in action</em></p>
+  
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-exclamation-triangle text-accent"></i>
+    </div>
+    <h4>Violations Detection</h4>
+    <p>Creates an identifier report that highlights identifier naming violations detected across the project along with a rating of violations on a scale of severity. Users can view which identifiers have violations and suggestions on how to resolve them.</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-file-export text-accent"></i>
+    </div>
+    <h4>Data Export</h4>
+    <p>Developed an export system that allows users to download identifier data in CSV or JSON formats. This helps support easy sharing, analysis, and documentation of identifier usage and violations.</p>
+  </div>
+  
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="fas fa-code text-accent"></i>
+    </div>
+    <h4>Format Identifiers</h4>
+    <p>Built a featured system that extracts all identifiers from a project, grouped by their format type (parameters, fields, variables, classes, types).</p>
+  </div>
 </div>
 
-## Play the Demo
-
-<div class="text-center my-4">
-  <p>Try out our prototype version and explore the shadows yourself:</p>
-  <a href="#" class="btn btn-primary btn-lg my-3">
-    <i class="fas fa-download"></i> Download Demo
-  </a>
-</div>
-
-## Game Design & Art
-
-Preview some of our UI and concept work:
+## Implementation
 
 <div class="row">
   <div class="col-md-6">
     <div class="text-center p-3">
-      <img width="100%" class="img-fluid rounded shadow" src="../img/into-the-shadows-gameplay.png" alt="Gameplay Screenshot">
-      <p class="text-muted"><em>Gameplay</em></p>
+      <img width="105%" class="img-fluid rounded shadow" src="../img/ide3.png" alt="Plugin Interface">
+      <p class="text-muted"><em>Data Export Interface</em></p>
     </div>
   </div>
   <div class="col-md-6">
     <div class="text-center p-3">
-      <img width="100%" class="img-fluid rounded shadow" src="../img/into-the-shadows-start-menu.png" alt="Start Menu">
-      <p class="text-muted"><em>Start Menu</em></p>
+      <img width="100%" class="img-fluid rounded shadow" src="../img/ide2.png" alt="Violations Panel">
+      <p class="text-muted"><em>Violations Detection Panel</em></p>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-12">
     <div class="text-center p-3">
-      <img width="100%" class="img-fluid rounded shadow" src="../img/into-the-shadows-character-selection.png" alt="Character Selection">
-      <p class="text-muted"><em>Character Selection</em></p>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="text-center p-3">
-      <img width="100%" class="img-fluid rounded shadow" src="../img/into-the-shadows-main-menu.png" alt="Main Menu">
-      <p class="text-muted"><em>Main Menu</em></p>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="text-center p-3">
-      <img width="100%" class="img-fluid rounded shadow" src="../img/into-the-shadows-shop.png" alt="Shop Interface">
-      <p class="text-muted"><em>Shop</em></p>
+      <img width="50%" class="img-fluid rounded shadow" src="../img/ide.png" alt="Data Export View">
+      <p class="text-muted"><em>Bubble Chart Visualization</em></p>
     </div>
   </div>
 </div>
 
-## What's Next
+## Methodology
 
-Our team is excited to continue building on the foundation of **Into the Shadows**. Here's what we're planning as we work toward our full release:
-
-<div class="card shadow my-4">
-  <div class="card-body">
-    <ul class="fa-ul">
-      <li><span class="fa-li"><i class="fas fa-users"></i></span><strong>Expanded Online Features:</strong> Enhance our current multiplayer system by refining matchmaking logic, adding lobby chat, and ensuring smoother game sync across all players.</li>
-      <li><span class="fa-li"><i class="fas fa-ghost"></i></span><strong>New Monsters & Survivor Roles:</strong> Introduce more character types with unique powers to deepen strategic variety and replayability.</li>
-      <li><span class="fa-li"><i class="fas fa-bug"></i></span><strong>Bug Fixing & Polish:</strong> Address known issues like animation glitches and action button delays to improve player control and visual fluidity.</li>
-      <li><span class="fa-li"><i class="fas fa-sliders-h"></i></span><strong>Settings & Accessibility Menu:</strong> Implement volume controls, keybinding options, and display settings to support more player preferences.</li>
-      <li><span class="fa-li"><i class="fas fa-map"></i></span><strong>Custom Maps with Hazards:</strong> Add new stages that feature fog, traps, and darkness mechanics to keep every match tense and unpredictable.</li>
-      <li><span class="fa-li"><i class="fas fa-book"></i></span><strong>Story Mode:</strong> Explore the world's backstory with a mission-based campaign featuring cutscenes and unlockable lore entries.</li>
-    </ul>
+<div class="methodology-container">
+  <div class="methodology-step">
+    <span class="step-number">1</span>
+    <p>Identifiers are Organized into distinct categories</p>
+  </div>
+  <div class="methodology-step">
+    <span class="step-number">2</span>
+    <p>Identifiers are Diagrammed into lists by relationship (Parameter, Field, Variable)</p>
+  </div>
+  <div class="methodology-step">
+    <span class="step-number">3</span>
+    <p>Identifiers are Diagrammed into lists by category (Class, Type and Name)</p>
+  </div>
+  <div class="methodology-step">
+    <span class="step-number">4</span>
+    <p>Violations are presented with a severity scale</p>
+  </div>
+  <div class="methodology-step">
+    <span class="step-number">5</span>
+    <p>Violations are gathered with a zero-to-full that shows the violations</p>
+  </div>
+  <div class="methodology-step">
+    <span class="step-number">6</span>
+    <p>Identifiers are evaluated by Type, Class and Name</p>
   </div>
 </div>
+
+## Challenges
+
+There were a variety of challenges that were encountered throughout the development of the plugin, particularly with implementing the tool across different coding styles and understanding the framework. Additionally, managing overlapping elements in bubble visualizations and handling the UI responsive involved complex design and event handling aspects. The project also introduced additional layers of testing and debugging.
+
+## Next Steps
+
+The Identifier Name IDE Plugin brings identifier analysis and visualization into the development workflow, aiding in code comprehension and refactoring. Future development will focus on integration with more language-specific conventions, multi-language support for different syntaxes, and more customizations on style preferences to better adapt to the needs of the user.
+
+## Team
+
+<div class="team-section">
+  <p><strong>Aaren Orquia, Samuel Yang, Josiah Liu</strong></p>
+  <p>Sponsor: Anthony Peruma</p>
+  <p>ICS 414 Software Project – Spring 2023</p>
+</div>
+
+## Tools & Frameworks
+
+<div class="tools-container">
+  <div class="tool-item">
+    <img src="https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png" alt="IntelliJ" width="40">
+    <span>IntelliJ</span>
+  </div>
+  <div class="tool-item">
+    <img src="https://kotlinlang.org/assets/images/favicon.svg" alt="Kotlin" width="40">
+    <span>Kotlin</span>
+  </div>
+  <div class="tool-item">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java" width="40">
+    <span>Java</span>
+  </div>
+  <div class="tool-item">
+    <img src="https://gradle.org/images/gradle-knowledge-graph-logo.png" alt="Gradle" width="40">
+    <span>Gradle</span>
+  </div>
+  <div class="tool-item">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="40">
+    <span>GitHub</span>
+  </div>
+</div>
+
+<style>
+/* Minimal Navigation */
+.minimal-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem auto;
+}
+
+.minimal-nav a {
+  color: var(--text-color, #f5f5f5);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.minimal-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color, #64ffda);
+  transition: width 0.3s ease;
+}
+
+.minimal-nav a:hover {
+  color: var(--accent-color, #64ffda);
+}
+
+.minimal-nav a:hover::after {
+  width: 100%;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: rgba(30, 30, 30, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color, #64ffda);
+}
+
+.feature-card h4 {
+  margin-bottom: 1rem;
+  color: var(--accent-color, #64ffda);
+}
+
+/* Methodology */
+.methodology-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.methodology-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--accent-color, #64ffda);
+  color: var(--bg-color, #0a192f);
+  font-weight: bold;
+}
+
+/* Team Section */
+.team-section {
+  background: rgba(30, 30, 30, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Tools */
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.text-accent {
+  color: var(--accent-color, #64ffda);
+}
+
+@media (max-width: 768px) {
+  .minimal-nav {
+    gap: 1rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .methodology-container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 

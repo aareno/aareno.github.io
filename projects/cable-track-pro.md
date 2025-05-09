@@ -10,142 +10,80 @@ labels:
   - React
   - MongoDB
   - Meteor
-  - Software Engineering
-summary: "A web application that helps electricians quickly and easily create schedules for their projects."
+summary: "A specialized web application for electricians to streamline cable management and project scheduling."
 ---
 
-# CableTrack.Pro
-
-## Table of Contents
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Screenshots](#screenshots)
-- [Development Process](#development-process)
-- [My Contributions](#my-contributions)
-- [Technical Implementation](#technical-implementation)
-- [Lessons Learned](#lessons-learned)
-- [Team](#team)
+<div class="text-center mb-5">
+  <img width="700px" class="img-fluid rounded shadow" src="../img/home page.png" alt="CableTrack.Pro Homepage">
+</div>
 
 ## Overview
 
-[CableTrack.Pro](https://ingeniouspartners.github.io/cabletrack.pro/) is a specialized tool designed to streamline project management for electricians. The application enables efficient tracking of cable meta-data, pull-ins, terminations, and testing procedures. By centralizing this information, electricians can generate Building Information Management (BIM) reports and exports with minimal effort, significantly improving workflow efficiency.
-
-<div class="text-center p-4">
-  <img width="600px" class="img-fluid rounded shadow" src="../img/home page.png" alt="CableTrack.Pro Homepage">
-  <p class="text-muted"><em>CableTrack.Pro homepage showing the main dashboard interface</em></p>
-</div>
+[CableTrack.Pro](https://ingeniouspartners.github.io/cabletrack.pro/) is a specialized tool for electricians to efficiently track cable metadata, pull-ins, terminations, and testing procedures. By centralizing this information, the application enables quick generation of Building Information Management (BIM) reports, significantly improving workflow efficiency.
 
 ## Key Features
 
-- **Project Management**: Create, edit, view, and delete electrical projects
-- **Cable Tracking**: Document and organize cable specifications and metadata
-- **Installation Monitoring**: Track pull-in progress and termination status
-- **Testing Documentation**: Record and verify testing procedures and results
-- **Report Generation**: Export BIM-compatible reports for project documentation
+- **Project Management** — Create and manage electrical projects
+- **Cable Tracking** — Document cable specifications and metadata
+- **Installation Monitoring** — Track pull-in progress and termination status
+- **Testing Documentation** — Record and verify testing procedures
+- **Report Generation** — Export BIM-compatible reports
 
-## Screenshots
-
-<div class="row">
-  <div class="col-sm-6">
-    <div class="text-center p-3">
-      <img width="100%" class="img-fluid rounded shadow" src="../img/list project.png" alt="Projects Page">
-      <p class="text-muted"><em>Projects dashboard showing active electrical projects</em></p>
-    </div>
+<div class="row mb-5">
+  <div class="col-md-6">
+    <img width="100%" class="img-fluid rounded shadow" src="../img/list project.png" alt="Projects Dashboard">
   </div>
-  <div class="col-sm-6">
-    <div class="text-center p-3">
-      <img width="100%" class="img-fluid rounded shadow" src="../img/view projects.png" alt="Project Details">
-      <p class="text-muted"><em>Detailed view of an individual project's specifications</em></p>
-    </div>
+  <div class="col-md-6">
+    <img width="100%" class="img-fluid rounded shadow" src="../img/view projects.png" alt="Project Details">
   </div>
 </div>
 
-## Development Process
+## Technology Stack
 
-This application was developed using the **Model-View-Design (MVD)** pattern to separate business logic from the user interface. We implemented an issue-driven project management approach to track progress and ensure accountability throughout the development cycle.
-
-### Technologies Used
-
-- **Frontend**: React.js, Bootstrap
-- **Backend**: Meteor.js
-- **Database**: MongoDB
-- **Testing**: TestCafe
-- **Deployment**: GitHub Pages
+<div class="d-flex flex-wrap justify-content-center mb-5">
+  <div class="tech-badge m-2">React</div>
+  <div class="tech-badge m-2">Meteor.js</div>
+  <div class="tech-badge m-2">MongoDB</div>
+  <div class="tech-badge m-2">Bootstrap</div>
+  <div class="tech-badge m-2">TestCafe</div>
+</div>
 
 ## My Contributions
 
-As a software engineer on the [Indigenous Partners](https://github.com/ingeniouspartners) team, I focused on implementing the project management functionality:
+As a software engineer on the Indigenous Partners team, I focused on the project management functionality:
 
-- **Project Creation**: Designed and implemented the "Add Project" interface
-- **Project Management**: Built edit, view, list, and delete capabilities
-- **Data Validation**: Implemented validation logic for project form inputs
-- **Testing**: Created TestCafe test suites for the Projects component
-- **Documentation**: Contributed to technical documentation and user guides
-
-## Technical Implementation
-
-The project management module follows a structured architecture:
-
-```javascript
-// Project Schema Example
-const ProjectSchema = new SimpleSchema({
-  name: {
-    type: String,
-    required: true,
-    max: 50,
-  },
-  description: {
-    type: String,
-    required: true,
-    max: 200,
-  },
-  startDate: {
-    type: Date,
-    required: true,
-  },
-  estimatedCompletion: {
-    type: Date,
-    required: true,
-  },
-  // Additional fields...
-});
-```
+- Designed and implemented the project creation interface
+- Built comprehensive project CRUD operations
+- Implemented robust data validation for form inputs
+- Created TestCafe test suites for quality assurance
+- Contributed to technical documentation and user guides
 
 ## Lessons Learned
 
-### Technical Growth
-Working on CableTrack.Pro enhanced my skills with:
-- **Meteor.js ecosystem**: Gained practical experience with reactive data and publications
-- **MongoDB integration**: Learned efficient database schema design and query optimization
-- **Deployment processes**: Mastered continuous integration workflows
+This project enhanced my technical skills with Meteor.js and MongoDB while providing valuable experience in team collaboration through:
 
-### Teamwork & Collaboration
-This project was my first team-based coding experience, where I discovered the critical importance of:
+- Regular code reviews and sync-ups
+- Issue-driven project management
+- Applied design patterns (MVD architecture)
+- Continuous integration workflows
 
-- **Communication**: Regular sync-ups and code reviews kept everyone aligned
-- **Adaptability**: Learning to merge code and resolve conflicts efficiently
-- **Patience**: Working through complex issues without getting frustrated
-
-### Software Engineering Principles
-I gained practical understanding of:
-- **Design Patterns**: Applied MVD to create maintainable, modular code
-- **Issue-Driven Project Management**: Used GitHub issues to track tasks and progress
-- **Code Quality**: Implemented consistent styling and documentation practices
-
-## Team
-
-CableTrack.Pro was developed by Indigenous Partners:
-- Andrea Jans
-- Ursula Nichols
-- Matthew Yamamoto
-- Mikhail Shkaralevich
-- [Your Name]
-
-<div class="text-center p-4">
-  <a href="https://github.com/ingeniouspartners" class="btn btn-primary">
+<div class="text-center mt-5">
+  <a href="https://github.com/ingeniouspartners" class="btn btn-outline-primary me-2">
     <i class="fab fa-github"></i> View on GitHub
   </a>
-  <a href="https://ingeniouspartners.github.io/cabletrack.pro/" class="btn btn-success">
-    <i class="fas fa-external-link-alt"></i> Live Demo
+  <a href="https://ingeniouspartners.github.io/cabletrack.pro/" class="btn btn-outline-success">
+    <i class="fas fa-external-link-alt"></i> Website
   </a>
 </div>
+
+<style>
+.tech-badge {
+  background-color: #f8f9fa;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #495057;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+</style>
