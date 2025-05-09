@@ -31,5 +31,7 @@ exclude:
 include:
   - .nojekyll
   - _data
+  - "assets/background.mp4"
+  - "background.mp4"
 plugins:
   - jekyll-gist
