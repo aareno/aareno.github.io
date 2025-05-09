@@ -4,18 +4,14 @@ layout: home
 ---
 
 <section class="intro">
-  <span>Hello, my name is</span>
-  <h1>{{ site.data.bio.basics.name }}.</h1>
-  <h1>I build software.</h1>
-  <p>I'm a software engineer with interest in AI, UI, UX and Video Game Design. Currently, I'm focused on building accessible and helpful products designed around human needs.</p>
-</section>
-
-<section class="video-section">
-  <div class="video-container">
-    <video controls width="100%">
-        <source src="/assets/background.mp4" type="video/mp4">ls -la background.mp4
-      Your browser does not support the video tag.
-    </video>
+  <video class="background-video" autoplay loop muted playsinline>
+    <source src="/assets/background.mp4" type="video/mp4">
+  </video>
+  <div class="intro-content">
+    <span>Hello, my name is</span>
+    <h1>{{ site.data.bio.basics.name }}.</h1>
+    <h1>I build software.</h1>
+    <p>I'm a software engineer with interest in AI, UI, UX and Video Game Design. Currently, I'm focused on building accessible and helpful products designed around human needs.</p>
   </div>
 </section>
 
@@ -116,6 +112,24 @@ layout: home
     justify-content: center;
     min-height: 90vh;
     padding: 5rem 5%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.7;
+  }
+  
+  .intro-content {
+    position: relative;
+    z-index: 1;
   }
   
   .intro span {
@@ -260,27 +274,6 @@ layout: home
     width: 1.8rem;
     height: 1.8rem;
     fill: currentColor;
-  }
-  
-  .video-section {
-    padding: 0 5% 5rem 5%;
-    display: flex;
-    justify-content: center;
-    background-color: var(--bg-color);
-  }
-  
-  .video-container {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
-  }
-  
-  .video-container video {
-    display: block;
-    width: 100%;
-    height: auto;
   }
   
   @media (max-width: 768px) {
