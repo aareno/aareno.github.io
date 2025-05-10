@@ -122,17 +122,34 @@
 </style>
 
 <script>
-  // Add background color when scrolled past intro section
+  // Add background color when scrolled
   document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.portfolio-header');
+    const introElement = document.querySelector('.intro');
+    
+    // Apply scrolled class immediately if we're not on the homepage
+    if (!introElement) {
+      header.classList.add('scrolled');
+    }
     
     window.addEventListener('scroll', function() {
-      const introHeight = document.querySelector('.intro').offsetHeight;
-      
-      if (window.scrollY > introHeight * 0.7) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+      // If we're on the homepage with an intro section
+      if (introElement) {
+        const introHeight = introElement.offsetHeight;
+        
+        if (window.scrollY > introHeight * 0.7) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      } 
+      // For other pages, add blur after minimal scrolling
+      else {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
       }
     });
   });
