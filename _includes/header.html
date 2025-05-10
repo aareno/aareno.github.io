@@ -21,26 +21,24 @@
   }
 
   .portfolio-header {
-    background-color: var(--bg-color, #121212);
+    background-color: transparent;
     padding: 2rem 0;
-    position: sticky;
+    position: fixed; /* Change to fixed for better overlay effect */
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
-    border: none !important; /* Force remove any border */
-    border-bottom: none !important; /* Specifically target bottom border */
-    box-shadow: none !important; /* Remove any shadow */
-    outline: none !important; /* Remove any outline */
-    /* Add specific styling to ensure no line appears */
-    position: relative;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: background-color 0.3s ease;
   }
   
-  /* Remove any potential pseudo-elements that might create lines */
-  .portfolio-header::after,
-  .portfolio-header::before {
-    display: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    height: 0 !important;
+  /* Add background color when scrolled down */
+  .portfolio-header.scrolled {
+    background-color: rgba(18, 18, 18, 0.9); /* Semi-transparent version of var(--bg-color) */
+    backdrop-filter: blur(5px);
   }
   
   .header-container {
@@ -66,7 +64,8 @@
     color: var(--accent-color, #64ffda);
     text-decoration: none;
     transition: opacity 0.3s ease;
-    margin-right: 3rem; /* Add space between logo and navigation */
+    margin-right: 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
   }
   
   .main-nav {
@@ -88,6 +87,7 @@
     transition: color 0.3s ease;
     padding: 0.5rem 0;
     position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
   }
   
   .nav-item:hover {
@@ -120,3 +120,20 @@
     }
   }
 </style>
+
+<script>
+  // Add background color when scrolled past intro section
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.portfolio-header');
+    
+    window.addEventListener('scroll', function() {
+      const introHeight = document.querySelector('.intro').offsetHeight;
+      
+      if (window.scrollY > introHeight * 0.7) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
