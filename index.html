@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Aaren Orquia | Professional Portfolio">
+    <meta name="description" content="Professional Portfolio">
+    <meta name="image" content="https://github.com/aareno.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aaren Orquia | Professional Portfolio">
+    <meta property="og:url" content="https://aareno.github.io/">
+    <meta property="og:title" content="Aaren Orquia | Professional Portfolio">
+    <meta property="og:description" content="Professional Portfolio">
+    <meta property="og:image" content="https://github.com/aareno.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <link rel="stylesheet" type="text/css" href="/css/portfolio-style.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Aaren Orquia | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="portfolio-header">
+  <div class="header-container">
+    <div class="content-wrapper">
+      <a class="logo" href="/">Aaren Orquia</a>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="/#about" class="nav-item">About</a></li>
+          <li><a href="/#projects" class="nav-item">Projects</a></li>
+          <li><a href="/#experience" class="nav-item">Experience</a></li>
+          <li><a href="/resume.html" class="nav-item">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  .portfolio-header {
+    background-color: transparent;
+    padding: 2rem 0;
+    position: fixed; /* Change to fixed for better overlay effect */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Add background color when scrolled down */
+  .portfolio-header.scrolled {
+    background-color: rgba(18, 18, 18, 0.9); /* Semi-transparent version of var(--bg-color) */
+    backdrop-filter: blur(5px);
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 5%;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    margin-right: 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  }
+  
+  .main-nav {
+    /* Remove margin-left: auto to keep navigation on the left */
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    color: var(--text-color, #f5f5f5);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  }
+  
+  .nav-item:hover {
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+  }
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color, #64ffda);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 1rem;
+    }
+    
+    .portfolio-header {
+      padding: 1rem 5%;
+    }
+  }
+</style>
+
+<script>
+  // Add background color when scrolled
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.portfolio-header');
+    const introElement = document.querySelector('.intro');
+    
+    // Apply scrolled class immediately if we're not on the homepage
+    if (!introElement) {
+      header.classList.add('scrolled');
+    }
+    
+    window.addEventListener('scroll', function() {
+      // If we're on the homepage with an intro section
+      if (introElement) {
+        const introHeight = introElement.offsetHeight;
+        
+        if (window.scrollY > introHeight * 0.7) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      } 
+      // For other pages, add blur after minimal scrolling
+      else {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+    });
+  });
+</script>
+
+<section class="intro">
+  <video class="background-video" autoplay loop muted playsinline>
+    <source src="/assets/background.mp4" type="video/mp4">
+  </video>
+  <div class="intro-content">
+    <span>Hello, my name is</span>
+    <h1>Aaren Orquia.</h1>
+    <h1>I build software.</h1>
+    <p>I'm a software engineer with interest in AI, UI, UX and Video Game Design. Currently, I'm focused on building accessible and helpful products designed around human needs.</p>
+  </div>
+</section>
+
+<div class="about-section py-5" id="about">
+  <div class="container px-0">
+    <h2 class="section-heading mb-5">About Me</h2>
+    <div class="row">
+      <div class="col-lg-8">
+  
+        <p class="role-text mb-4">Student</p>
+        <p class="about-text">I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.</p>
+        <p class="about-text">Testing</p>
+        
+        <div class="interests-section mt-4 mb-4">
+          <h3 class="mb-3">Interests</h3>
+          <div class="interests-container">
+            
+            <span class="interest-tag">Software Development</span>
+            
+            <span class="interest-tag">Videogame Design</span>
+            
+            <span class="interest-tag">Web Design</span>
+            
+            <span class="interest-tag">Mobile App Development</span>
+            
+          </div>
+        </div>
+        
+        <div class="social-links-container mt-5">
+          
+            
+            <div class="social-link-wrapper">
+              <a href="https://aarenorquia.com" target="_blank" class="social-link" aria-label="Website">
+  <svg class="tf-social">
+    <use xlink:href="/img/bootstrap-icons.svg#house"/>
+  </svg>
+  <span>Website</span>
+</a>
+
+<style>
+  .social-link {
+    color: var(--text-color, #f5f5f5);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .social-link:hover {
+    color: var(--accent-color, #64ffda);
+  }
+  
+  .tf-social {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+</style>
+
+            </div>
+          
+
+          
+            
+            <div class="social-link-wrapper">
+              <a href="mailto:aareno@hawaii.edu" target="_blank" class="social-link" aria-label="Email">
+  <svg class="tf-social">
+    <use xlink:href="/img/bootstrap-icons.svg#envelope"/>
+  </svg>
+  <span>Email</span>
+</a>
+
+<style>
+  .social-link {
+    color: var(--text-color, #f5f5f5);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .social-link:hover {
+    color: var(--accent-color, #64ffda);
+  }
+  
+  .tf-social {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+</style>
+
+            </div>
+          
+
+          
+            
+            
+            <div class="social-link-wrapper">
+              <a href="http://github.com/aareno" target="_blank" class="social-link" aria-label="github">
+  <svg class="tf-social">
+    <use xlink:href="/img/bootstrap-icons.svg#github"/>
+  </svg>
+  <span>github</span>
+</a>
+
+<style>
+  .social-link {
+    color: var(--text-color, #f5f5f5);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .social-link:hover {
+    color: var(--accent-color, #64ffda);
+  }
+  
+  .tf-social {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+</style>
+
+            </div>
+          
+            
+            
+            <div class="social-link-wrapper">
+              <a href="https://www.linkedin.com/in/aaren-orquia-2b899a23a/" target="_blank" class="social-link" aria-label="linkedin">
+  <svg class="tf-social">
+    <use xlink:href="/img/bootstrap-icons.svg#linkedin"/>
+  </svg>
+  <span>linkedin</span>
+</a>
+
+<style>
+  .social-link {
+    color: var(--text-color, #f5f5f5);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .social-link:hover {
+    color: var(--accent-color, #64ffda);
+  }
+  
+  .tf-social {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+</style>
+
+            </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-start">
+        <div class="profile-img-container">
+          <img src="https://github.com/aareno.png" class="profile-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .about-section {
+    background-color: var(--bg-color, #121212);
+    color: var(--text-color, #f5f5f5);
+    padding: 5rem 5%;
+  }
+  
+  .about-section .container {
+    max-width: 1200px;
+    margin-left: 0;
+  }
+  
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color, #f5f5f5);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color, #64ffda);
+  }
+  
+  .profile-img-container {
+    width: 350px;
+    height: 350px;
+    margin: 25px -125px 0 auto; /* Added top margin to lower the image */
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-img-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .role-text {
+    color: var(--accent-color, #64ffda);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--muted-text, #a0a0a0);
+    max-width: 700px;
+  }
+  
+  .interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .interest-tag {
+    background-color: var(--secondary-bg, #1e1e1e);
+    color: var(--accent-color, #64ffda);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .interest-tag:hover {
+    transform: translateY(-2px);
+  }
+  
+  .social-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .social-link-wrapper {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+</style>
+
+<section class="projects-section py-5" id="projects">
+  <div class="container">
+    <h2 class="section-heading mb-5">Featured Projects</h2>
+    
+    <div class="projects-grid">
+      
+      
+        
+          <div class="project-card">
+  <div class="project-image">
+    <img src="/img/logo2.jpg" alt="Seen">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Seen</h3>
+    <p class="project-description">A mobile application enabling users to create and manage watchlists for TV shows.</p>
+    <div class="project-technologies">
+      
+        <span class="tech-tag">Java</span>
+      
+        <span class="tech-tag">SQLite</span>
+      
+        <span class="tech-tag">XML</span>
+      
+    </div>
+  </div>
+
+  <a href="/projects/seen.html" class="project-link"></a>
+</div>
+
+<style>
+  .project-card {
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    color: var(--text-color, #f5f5f5);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .project-description {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .tech-tag {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.9rem;
+  }
+  
+  .project-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+</style>
+
+        
+        
+      
+        
+          <div class="project-card">
+  <div class="project-image">
+    <img src="/img/ics.png" alt="Identifier Name IDE Plugin">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Identifier Name IDE Plugin</h3>
+    <p class="project-description">An IntelliJ platform plugin that visually organizes and analyzes code identifiers to improve code quality and navigation.</p>
+    <div class="project-technologies">
+      
+        <span class="tech-tag">Java</span>
+      
+        <span class="tech-tag">Kotlin</span>
+      
+        <span class="tech-tag">Gradle</span>
+      
+    </div>
+  </div>
+
+  <a href="/projects/name-identifier-plugin.html" class="project-link"></a>
+</div>
+
+<style>
+  .project-card {
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    color: var(--text-color, #f5f5f5);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .project-description {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .tech-tag {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.9rem;
+  }
+  
+  .project-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+</style>
+
+        
+        
+      
+        
+          <div class="project-card">
+  <div class="project-image">
+    <img src="/img/startmenu.png" alt="In the Shadows">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">In the Shadows</h3>
+    <p class="project-description">A thrilling multiplayer horror puzzle game where players race to escape a maze while being hunted by AI monsters.</p>
+    <div class="project-technologies">
+      
+        <span class="tech-tag">Unity</span>
+      
+        <span class="tech-tag">C#</span>
+      
+        <span class="tech-tag">Multiplayer</span>
+      
+    </div>
+  </div>
+
+  <a href="/projects/in-the-shadows.html" class="project-link"></a>
+</div>
+
+<style>
+  .project-card {
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    color: var(--text-color, #f5f5f5);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .project-description {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .tech-tag {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.9rem;
+  }
+  
+  .project-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+</style>
+
+        
+        
+          
+    </div>
+
+    
+      <div class="text-center mt-5">
+        <a href="/projects/" class="view-all-link">See all 4 projects</a>
+      </div>
+    
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    background-color: var(--bg-color, #121212);
+    color: var(--text-color, #f5f5f5);
+    padding: 5rem 5%;
+  }
+  
+  .projects-section .container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color, #f5f5f5);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 3rem; /* Added top margin for increased spacing */
+  }
+  
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color, #64ffda);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fixed 3-column layout */
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  @media (max-width: 1200px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .view-all-link {
+    display: inline-block;
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--accent-color, #64ffda);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .view-all-link:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    text-decoration: none;
+  }
+</style>
+
+
+<section id="experience">
+  <h2>Work Experience</h2>
+  
+  
+    
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>Coding AI Training <span class="company">@ Outlier</span></h3>
+          <span class="date">October 2024 - Present</span>
+        </div>
+        <p>Contributed to AI model improvement through specialzied coding prompt creation and output evaluation.</p>
+        
+        
+          <div class="experience-responsibilities">
+            <h4 class="responsibilities-heading">Responsibilities:</h4>
+            <ul class="responsibilities-list">
+              
+                <li>Generate target prompts across multiple programming languages (Java, Python, C)</li>
+              
+                <li>Evaluated and ranked AI-genetrated code solutions based on correctness and efficiency</li>
+              
+                <li>Provided detailed feedback to improve AI model performance in code generation tasks</li>
+              
+            </ul>
+          </div>
+        
+      </div>
+    
+  
+  
+  
+</section>
+
+<section id="contact">
+  <h2>Get In Touch</h2>
+  <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll do my best to get back to you!</p>
+  <div class="social-links">
+    
+      
+        <a href="http://github.com/aareno" aria-label="github"><i class="tf-social">
+          <svg class="tf-social">
+            <use xlink:href="/img/bootstrap-icons.svg#github"/>
+          </svg>
+        </i></a>
+      
+    
+      
+        <a href="https://www.linkedin.com/in/aaren-orquia-2b899a23a/" aria-label="linkedin"><i class="tf-social">
+          <svg class="tf-social">
+            <use xlink:href="/img/bootstrap-icons.svg#linkedin"/>
+          </svg>
+        </i></a>
+      
+    
+    <a href="mailto:aareno@hawaii.edu" aria-label="Email"><i class="tf-social">
+      <svg class="tf-social">
+        <use xlink:href="/img/bootstrap-icons.svg#envelope-fill"/>
+      </svg>
+    </i></a>
+  </div>
+</section>
+
+<style>
+  :root {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --accent-color: #64ffda;
+    --secondary-bg: #1e1e1e;
+    --muted-text: #a0a0a0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; /* Changed from 90vh to 100vh */
+    height: 100vh;     /* Ensure it always fills the viewport */
+    padding: 5rem 5%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;      /* Ensure full viewport width */
+    height: 105vh;     /* Slightly larger than viewport height */
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  .intro-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .intro span {
+    color: var(--muted-text);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .intro h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .intro p {
+    color: var(--muted-text);
+    max-width: 600px;
+    font-size: 1.1rem;
+  }
+  
+  .highlight {
+    color: var(--accent-color);
+  }
+  
+  section {
+    padding: 5rem 5%;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+  }
+  
+  #experience {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .experience-item {
+    margin-bottom: 3rem;
+    max-width: 800px;
+  }
+  
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .company {
+    color: var(--accent-color);
+  }
+  
+  .date {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+  }
+  
+  .experience-responsibilities {
+    margin-top: 1rem;
+  }
+  
+  .responsibilities-heading {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .responsibilities-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--muted-text);
+  }
+  
+  .responsibilities-list li {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+  }
+  
+  .view-all-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .view-all-link:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    text-decoration: none;
+  }
+  
+  #contact {
+    text-align: left;
+  }
+  
+  #contact p {
+    margin: 0 0 2rem;
+    max-width: 600px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+  }
+  
+  .tf-social {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: currentColor;
+  }
+  
+  @media (max-width: 768px) {
+    .experience-header {
+      flex-direction: column;
+    }
+    
+    .date {
+      margin-top: 0.5rem;
+    }
+  }
+</style>
+
+<footer class="navbar navbar-expand navbar-dark" style="background-color: var(--bg-color, #121212);">
+  <div class="container-fluid">
+    <div class="mx-auto text-center">
+      <div class="d-flex flex-column">
+        <small class="nav-link mb-0">Made by Aaren Orquia</small>
+        <small class="nav-link mt-0">© 2025 All Rights Reserved</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

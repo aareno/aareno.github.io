@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="A Mind of Its Own | Aaren Orquia | Professional Portfolio">
+    <meta name="description" content="Professional Portfolio">
+    <meta name="image" content="https://github.com/aareno.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aaren Orquia | Professional Portfolio">
+    <meta property="og:url" content="https://aareno.github.io/essays/a-mind-of-its-own.html">
+    <meta property="og:title" content="A Mind of Its Own | Aaren Orquia | Professional Portfolio">
+    <meta property="og:description" content="Professional Portfolio">
+    <meta property="og:image" content="https://github.com/aareno.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <link rel="stylesheet" type="text/css" href="/css/portfolio-style.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>A Mind of Its Own | Aaren Orquia | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="portfolio-header">
+  <div class="header-container">
+    <div class="content-wrapper">
+      <a class="logo" href="/">Aaren Orquia</a>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="/#about" class="nav-item">About</a></li>
+          <li><a href="/#projects" class="nav-item">Projects</a></li>
+          <li><a href="/#experience" class="nav-item">Experience</a></li>
+          <li><a href="/resume.html" class="nav-item">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  .portfolio-header {
+    background-color: transparent;
+    padding: 2rem 0;
+    position: fixed; /* Change to fixed for better overlay effect */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Add background color when scrolled down */
+  .portfolio-header.scrolled {
+    background-color: rgba(18, 18, 18, 0.9); /* Semi-transparent version of var(--bg-color) */
+    backdrop-filter: blur(5px);
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 5%;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    margin-right: 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  }
+  
+  .main-nav {
+    /* Remove margin-left: auto to keep navigation on the left */
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    color: var(--text-color, #f5f5f5);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  }
+  
+  .nav-item:hover {
+    color: var(--accent-color, #64ffda);
+    text-decoration: none;
+  }
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color, #64ffda);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 1rem;
+    }
+    
+    .portfolio-header {
+      padding: 1rem 5%;
+    }
+  }
+</style>
+
+<script>
+  // Add background color when scrolled
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.portfolio-header');
+    const introElement = document.querySelector('.intro');
+    
+    // Apply scrolled class immediately if we're not on the homepage
+    if (!introElement) {
+      header.classList.add('scrolled');
+    }
+    
+    window.addEventListener('scroll', function() {
+      // If we're on the homepage with an intro section
+      if (introElement) {
+        const introHeight = introElement.offsetHeight;
+        
+        if (window.scrollY > introHeight * 0.7) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      } 
+      // For other pages, add blur after minimal scrolling
+      else {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+    });
+  });
+</script>
+
+<section class="experience-section py-5">
+  <div class="container">
+    <h2 class="section-heading mb-5">Essays</h2>
+    
+    <div class="experience-container">
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>A Mind of Its Own </h3>
+          <span class="date">18 Nov 2023</span>
+        </div>
+        <div class="experience-content">
+          <h2 id="introduction">Introduction</h2>
+
+<p>Artificial Intelligence (AI) is a very useful tool that can change education by redefining the way we approach learning and understanding. The use of AI in education can be used in any subject/topic to give students the information that they need to understand a topic, information that might not have been taught in class. AI can be used specifically in Software Engineering to assist developers to learn and understand coding concepts and languages. The AI tools that I have used is ChatGPT and Co-Pilot. ChatGPT is a chatbot that can be used to answer questions about any topic. Co-Pilot is an AI tool, used to assist developers while coding. I have used both of these tools to assist me in learning more about different subjects.</p>
+
+<h2 id="personal-experience-with-ai">Personal Experience with AI</h2>
+
+<h3 id="1---experience-wods">1 - Experience WODS</h3>
+<p>Through my experience with AI in WODs, I felt like I didn’t need to use it. Most of the time I didn’t feel the need to get help from AI because I felt like I should challenge myself. The times that I would use AI is if I was stuck or really needed help. For the experience WODs, I never used AI since there were screen cast on how to finish the WOD at the end and there was no time-limit.</p>
+
+<h3 id="2---in-class-practice-wods">2 - In-class Practice WODS</h3>
+<p>Similarly during In-class Practice WODs, I wouldn’t use AI to challenge myself and to try to learn concepts more by myself.</p>
+
+<h3 id="3---in-class-wods">3 - In-class WODS</h3>
+<p>During In-class WODs, I only used AI when I was stuck or in a time crunch. I think that AI was really useful for WODs that involved writing algorithms, like the cities WOD where we had to use the underscore library to create two functions, one to find the average population of a island and the second to find the highest and lowest city populations. In this scenario, Co-pilot worked great by giving me a solution that worked, But In WODs where we had to set up a web page or create different features in an application (Ex: Buzz’s steak house), I found that it wasn’t very helpful because the criteria for the web page was more specific.</p>
+
+<h3 id="4---essays">4 - Essays</h3>
+<p>I found that when I asked ChatGPT to write me an essay, It didn’t write a good essay, but I think it can be used to give you an outline, starting point or ideas. I don’t think it can be used to just copy and paste an essay.</p>
+
+<h3 id="5---final-project">5 - Final Project</h3>
+<p>I had the best experience with AI by asking for coding examples, asking what lines of code do and asking what problems I have in my code. When I had no idea on how to start or create a feature on my final project, I would use ChatGPT to give me an example code.</p>
+
+<h3 id="6----learning-a-concept--tutorial">6 -  Learning a concept / Tutorial</h3>
+<p>When learning a concept, I think AI is very useful. I never asked it to explain specific topics to me, but when I asked it to give me examples of code, I think it really helped me to learn a concept faster.</p>
+
+<h3 id="7---answering-a-question-in-class-or-discord--8---smart-questions">7 - Answering a question in class or discord / 8 - Smart Questions</h3>
+<p>I never really used AI to ask or answer any question from in class or in discord. Usually, if questions are posted into discord, there are usually people that are able to help, so I didn’t feel the need to use AI. Something that I wished I did is use AI to ask questions during class. I think it could be useful to understand a topic faster.</p>
+
+<h3 id="9---coding-examples--11--writing-code">9 - Coding Examples / 11- Writing Code</h3>
+<p>Most of the time the example code didn’t work with my application, but it gave me a good starting point that I would be able to build off of.</p>
+
+<h3 id="10--explaining-code">10- Explaining Code</h3>
+<p>If there were lines of code I didn’t understand in the example code, I would ask ChatGPT what the lines of code do. I think it does a good job in explaining what code does. The explanation usually helped me understand the code and concept of the functions used better.</p>
+
+<h3 id="12--documenting-code">12- Documenting Code</h3>
+<p>A positive about the example code that ChatGPT gives is that it usually comes with comments that cover what each line of code does. This ties in with the AI explaining code and helping me to better understand the code or concept.</p>
+
+<h3 id="13--quality-assurance">13- Quality Assurance</h3>
+<p>If I ever had errors in my code, I would try to figure out how to fix them on my own, But If I still can’t figure it out, I ask ChatGPT. Sometimes It would give me the correct solution, but most times the solution wouldn’t work. Through my experience of coding from ChatGPT, I think that it is a hit or miss, It either works or it doesn’t.</p>
+
+<h2 id="impact-on-learning-and-understanding">Impact on Learning and Understanding</h2>
+
+<p>Overall, I think the use of AI has had a positive impact on my learning experience. I think it was especially useful in ICS 314 since lectures aren’t taught using traditional teaching methods. Since the class is taught in a sort of “flipped” style, we decide when we watch the lectures and I think AI can help us if we need examples or clarification on any concept that we are learning. It has definitely helped me in this class to have a better understanding of the concepts that we’ve learned.</p>
+
+<h2 id="practical-applications">Practical Applications</h2>
+
+<p>Beyond the use of AI in ICS 314, AI definitely has use in real-world projects, simulations and collaborative activities. I think AI can enhance efficiency and precision of a software engineer. AI can be used to help developers with simple tasks, but when solving more complex tasks / problems, their effectiveness drops significantly. In sectors like simulation and software testing, AI can be very useful, to analyze patterns in datasets to predict potential system failures or bugs.The use of AI application in real world challenges can help with project efficiency. AI has the potential to revolutionize software engineering.</p>
+
+<h2 id="challenges-and-opportunities">Challenges and Opportunities</h2>
+
+<p>The biggest challenges with AI is that it is sometimes inaccurate. If a problem is too complex, or not enough information is given, the AI’s answer will not be accurate. This is a downside of using AI, but I think it’s important to not be reliant on using it for every task. One way AI can be further integrated into software engineering is by having module or reading about how students can use AI effectively to get the answer that they want.</p>
+
+<h2 id="comparative-analysis">Comparative Analysis</h2>
+
+<p>I think AI enhanced approaches to learning can have better engagement and faster knowledge retention. But, traditional methods of learning allow for a deeper understanding of the content and allow for refining of practical skills with hands on experience.</p>
+
+<h2 id="future-considerations">Future Considerations</h2>
+
+<p>I think AI can play a big role in assisting software engineering education. The biggest advancement that AI gives to software engineering is the ability to easily get an answer to a problem. I think AI can be used to help students learn and understand concepts better. The challenges and areas for improvement of AI is that it is not always accurate. Which could result in students getting the wrong answer, which would not help them at all. Once AI becomes more reliable, I think it will be a great tool to use in education.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In conclusion, I think that AI is a great tool for education. I think it can be a very useful tool for students to learn concepts quickly, but it is important to not be reliant on AI because of the inaccuracy and it doesn’t promote deep understanding of topics, which could be bad in the long run. I think AI can be used in the future as a supplement to traditional learning methods. I think a mix of both would offer a great learning experience for students. I’m not sure on how to integrate it into future courses, but I think the use of AI is very helpful.</p>
+
+
+        </div>
+        
+        
+        <div class="essay-labels mt-4">
+          
+          
+          <span class="essay-tag">Reflection</span>
+          
+          
+          
+          <span class="essay-tag">Artificial Intelligence (AI)</span>
+          
+          
+          
+          <span class="essay-tag"></span>
+          
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience-section {
+    background-color: var(--bg-color, #121212);
+    color: var(--text-color, #f5f5f5);
+    padding: 5rem 0;
+  }
+  
+  .section-heading {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color, #f5f5f5);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color, #64ffda);
+  }
+  
+  .experience-container {
+    max-width: 800px;
+  }
+  
+  .experience-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .experience-item:last-child {
+    border-bottom: none;
+  }
+  
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .experience-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .company {
+    color: var(--accent-color, #64ffda);
+  }
+  
+  .date {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 0.9rem;
+  }
+  
+  .experience-content {
+    color: var(--muted-text, #a0a0a0);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .experience-content ul {
+    padding-left: 1.2rem;
+  }
+  
+  .experience-content li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .essay-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .essay-tag {
+    background-color: var(--secondary-bg, #1e1e1e);
+    color: var(--accent-color, #64ffda);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .essay-tag:hover {
+    transform: translateY(-2px);
+  }
+  
+  .experience-content h1, 
+  .experience-content h2, 
+  .experience-content h3, 
+  .experience-content h4 {
+    color: var(--text-color, #f5f5f5);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .experience-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .experience-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>
+
+<footer class="navbar navbar-expand navbar-dark" style="background-color: var(--bg-color, #121212);">
+  <div class="container-fluid">
+    <div class="mx-auto text-center">
+      <div class="d-flex flex-column">
+        <small class="nav-link mb-0">Made by Aaren Orquia</small>
+        <small class="nav-link mt-0">© 2025 All Rights Reserved</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

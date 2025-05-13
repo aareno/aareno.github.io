@@ -1,0 +1,136 @@
+{
+  "basics": {
+    "name": "Aaren Orquia",
+    "label": "Student",
+    "picture": "https://github.com/aareno.png",
+    "email": "aareno@hawaii.edu",
+    "phone": "808-419-2216",
+    "website": "https://aarenorquia.com",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.",
+    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "aareno", "url": "http://github.com/aareno" },
+      { "network": "linkedin", "username": "Aaren Orquia", "url": "https://www.linkedin.com/in/aaren-orquia-2b899a23a/" }
+
+    ]
+  },
+  "interests": [
+    { "name": "Software Development" },
+    { "name": "Videogame Design" },
+    { "name": "Web Design" },
+    { "name": "Mobile App Development" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C", "C++", "Java", "Javascript", "Java", "Python", "CSS", "HTML" ]
+    },
+    {
+      "name": "Frameworks",
+      "keywords": [ "Node.js", "React.js", "Bootstrap", "Meteor" ]
+    },
+    {
+      "name": "Databases",
+      "keywords": ["MongoDB"]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "MacOS", "Windows", "Unix","Git/GitHub" ]
+    },
+    {
+    "name": "Testing/Deployment",
+    "keywords": [ "JUnit", "Testcafe" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Spring, 2025)",
+      "studyType": "B.S.",
+      "startDate": "2021-09-01",
+      "endDate": "Present",
+      "courses": [
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "CableTrack.Pro",
+      "position": "Software Engineer",
+      "website": "https://github.com/ingeniouspartners",
+      "startDate": "2023",
+      "endDate": "",
+      "summary": "A web application to help electricians to quickly and easily create cable schedules for their projects | JavaScript, Meteor, MongoDB, React",
+      "highlights": [
+        "Companies can create projects that electricians can view to create cable schedules.",
+        "Application uses roles (only certain roles have access to some features).",
+        "Uses a Model-View-Controller design pattern."
+      ]
+    },
+    {
+      "company": "Record Database",
+      "position": "Software Engineer",
+      "website": "",
+      "startDate": "2022",
+      "endDate": "",
+      "summary": "A database that stores user information (records) into a file that can be edited | C++ |",
+      "highlights": [
+        "The program opens with a user interface asking what the user would like to do, add, remove or read a record.",
+        "Based on the user's choice, the program will complete it. The file storing the records changes if the user adds or removes a record.",
+        "The database is saved every time a user quits the program or changes the database."
+      ]
+    },
+    {
+      "company": "Sudoku Solver",
+      "position": "Software Engineer",
+      "website": "",
+      "startDate": "2022",
+      "endDate": "",
+      "summary": "A Sudoku solver that can solve any sudoku problem | Java |",
+      "highlights": [
+        "The program is given three 3x3 matrices with some missing values.",
+        "The goal of the sudoku solver is to fill the 9x9 square with numbers 1-9 with no repeating numbers in each line, horizontally, vertically and in the same 3x3.",
+        "The algorithm uses recursion to find possible values, plugging them in recursively until all three conditions are met."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Hawaii Swim Club",
+      "website": "",
+      "position": "Captain",
+      "startDate": "2011-07-08",
+      "endDate": "2021-06-28",
+      "summary": "Competitive Swimming",
+      "highlights": [
+        "State championship winner (2017)",
+        "Junior National qualifier (2021)"
+      ]
+    },
+        {
+      "organization": "University of Hawaii: Manoa",
+      "website": "https://hawaiiathletics.com/sports/mens-swimming-and-diving/roster/aaren-orquia/19737",
+      "position": "Swimmer (Butterfly)",
+      "startDate": "2021-08-017",
+      "endDate": "2022-06-28",
+      "summary": "Swimmer for UH Manoa",
+      "highlights": [
+        "Competed in the Mountain Pacific Sports Federation (MPSF) championships",
+        "Finished 5th in the 100 yard butterfly at the UNLV and Wyoming Tri-meet"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "MVP Award: Men's Swimming",
+      "date": "2017-2021",
+      "awarder": "Maui High School",
+      "summary": "Awarded to the most outstanding athlete in a season."
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
