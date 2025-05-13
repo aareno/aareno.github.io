@@ -43,7 +43,7 @@ Use strategy and tools like shotguns to distract or slow the monster, but be war
 
 <div class="video-container text-center my-5">
   <div class="embed-responsive embed-responsive-16by9 trailer-wrapper">
-    <iframe class="embed-responsive-item rounded shadow" src="https://www.youtube.com/embed/placeholder" allowfullscreen></iframe>
+    <iframe class="embed-responsive-item rounded shadow" src="https://youtu.be/r3j6km0amA4" allowfullscreen></iframe>
   </div>
   <p class="text-muted mt-3"><em>See our gameplay in action</em></p>
 </div>
