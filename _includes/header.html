@@ -1,8 +1,10 @@
 <header class="portfolio-header">
   <div class="header-container">
-    <div class="content-wrapper">
-      <a class="logo" href="{{ '/' | prepend: site.baseurl }}">{{ site.data.bio.basics.name }}</a>
-      <nav class="main-nav">
+    <div class="header-content">
+      <a class="logo" href="{{ '/' | prepend: site.baseurl }}" aria-label="{{ site.data.bio.basics.name }} — Home">
+        {{ site.data.bio.basics.name }}
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="{{ '/#about' | prepend: site.baseurl }}" class="nav-item">About</a></li>
           <li><a href="{{ '/#projects' | prepend: site.baseurl }}" class="nav-item">Projects</a></li>
@@ -14,143 +16,17 @@
   </div>
 </header>
 
-<style>
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-  }
-
-  .portfolio-header {
-    background-color: transparent;
-    padding: 2rem 0;
-    position: fixed; /* Change to fixed for better overlay effect */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    border: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Add background color when scrolled down */
-  .portfolio-header.scrolled {
-    background-color: rgba(18, 18, 18, 0.9); /* Semi-transparent version of var(--bg-color) */
-    backdrop-filter: blur(5px);
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-  }
-  
-  .content-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 5%;
-  }
-  
-  .logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--accent-color, #64ffda);
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-    margin-right: 3rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
-  }
-  
-  .main-nav {
-    /* Remove margin-left: auto to keep navigation on the left */
-  }
-
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-item {
-    color: var(--text-color, #f5f5f5);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    padding: 0.5rem 0;
-    position: relative;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
-  }
-  
-  .nav-item:hover {
-    color: var(--accent-color, #64ffda);
-    text-decoration: none;
-  }
-  
-  .nav-item::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--accent-color, #64ffda);
-    transition: width 0.3s ease;
-  }
-  
-  .nav-item:hover::after {
-    width: 100%;
-  }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      gap: 1rem;
-    }
-    
-    .portfolio-header {
-      padding: 1rem 5%;
-    }
-  }
-</style>
-
 <script>
-  // Add background color when scrolled
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.portfolio-header');
-    const introElement = document.querySelector('.intro');
-    
-    // Apply scrolled class immediately if we're not on the homepage
-    if (!introElement) {
-      header.classList.add('scrolled');
+    const intro = document.querySelector('.intro');
+
+    function updateHeader() {
+      const pastHero = intro && window.scrollY > intro.offsetHeight * 0.7;
+      header.classList.toggle('scrolled', !intro || pastHero || window.scrollY > 10);
     }
-    
-    window.addEventListener('scroll', function() {
-      // If we're on the homepage with an intro section
-      if (introElement) {
-        const introHeight = introElement.offsetHeight;
-        
-        if (window.scrollY > introHeight * 0.7) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      } 
-      // For other pages, add blur after minimal scrolling
-      else {
-        if (window.scrollY > 10) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      }
-    });
+
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
   });
 </script>
