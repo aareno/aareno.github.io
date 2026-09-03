@@ -94,7 +94,6 @@ The app provides a centralized platform for maintaining your media consumption a
       <li data-target="#animeCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#animeCarousel" data-slide-to="1"></li>
       <li data-target="#animeCarousel" data-slide-to="2"></li>
-      <li data-target="#animeCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Slides -->
@@ -135,17 +134,6 @@ The app provides a centralized platform for maintaining your media consumption a
         </div>
       </div>
       
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center flex-column align-items-center">
-          <div class="carousel-image-container mb-2">
-            <img class="img-fluid rounded shadow" src="../img/settingsscreen.png" alt="Settings Screen">
-          </div>
-          <div class="carousel-caption-below text-center">
-            <h5>Settings Screen</h5>
-            <p>Customize your Content</p>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Controls -->
