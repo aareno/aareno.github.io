@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Aaren Orquia | Professional Portfolio">
+    <meta name="description" content="Professional Portfolio">
+    <meta name="image" content="https://github.com/aareno.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aaren Orquia | Professional Portfolio">
+    <meta property="og:url" content="https://aareno.github.io/">
+    <meta property="og:title" content="Aaren Orquia | Professional Portfolio">
+    <meta property="og:description" content="Professional Portfolio">
+    <meta property="og:image" content="https://github.com/aareno.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <link rel="stylesheet" type="text/css" href="/css/portfolio-style.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Aaren Orquia | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="portfolio-header">
+  <div class="header-container">
+    <div class="header-content">
+      <a class="logo" href="/" aria-label="Aaren Orquia — Home">
+        Aaren Orquia
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/#about" class="nav-item">About</a></li>
+          <li><a href="/#projects" class="nav-item">Projects</a></li>
+          <li><a href="/#experience" class="nav-item">Experience</a></li>
+          <li><a href="/resume.html" class="nav-item">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.portfolio-header');
+    const intro = document.querySelector('.intro');
+
+    function updateHeader() {
+      const pastHero = intro && window.scrollY > intro.offsetHeight * 0.7;
+      header.classList.toggle('scrolled', !intro || pastHero || window.scrollY > 10);
+    }
+
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+  });
+</script>
+
+<section class="intro">
+  <video class="background-video" autoplay loop muted playsinline aria-hidden="true">
+    <source src="/assets/background.mp4" type="video/mp4">
+  </video>
+  <div class="intro-content">
+    <span class="intro-eyebrow">Hello, my name is</span>
+    <h1>Aaren Orquia.</h1>
+    <h1>I build software.</h1>
+    <p>I'm a software engineer interested in AI, UI/UX, and video game design. I focus on building accessible, useful products around real human needs.</p>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="container px-0">
+    <h2 class="section-heading">About Me</h2>
+    <div class="about-grid">
+      <div>
+        <p class="role-text">Student</p>
+        <p class="about-text">I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.</p>
+
+        <div class="interests-section">
+          <h3>Interests</h3>
+          <div class="interests-container">
+            
+              <span class="interest-tag">Software Development</span>
+            
+              <span class="interest-tag">Videogame Design</span>
+            
+              <span class="interest-tag">Web Design</span>
+            
+              <span class="interest-tag">Mobile App Development</span>
+            
+          </div>
+        </div>
+
+        <div class="social-links-container">
+          
+            
+            <a href="https://aarenorquia.com" target="_blank" rel="noreferrer" class="social-link" aria-label="Website">
+  <svg class="tf-social" aria-hidden="true">
+    <use href="/img/bootstrap-icons.svg#house"/>
+  </svg>
+  <span>Website</span>
+</a>
+
+          
+          
+            
+            <a href="mailto:aareno@hawaii.edu" target="_blank" rel="noreferrer" class="social-link" aria-label="Email">
+  <svg class="tf-social" aria-hidden="true">
+    <use href="/img/bootstrap-icons.svg#envelope"/>
+  </svg>
+  <span>Email</span>
+</a>
+
+          
+          
+            
+            
+            <a href="http://github.com/aareno" target="_blank" rel="noreferrer" class="social-link" aria-label="github">
+  <svg class="tf-social" aria-hidden="true">
+    <use href="/img/bootstrap-icons.svg#github"/>
+  </svg>
+  <span>github</span>
+</a>
+
+          
+            
+            
+            <a href="https://www.linkedin.com/in/aaren-orquia-2b899a23a/" target="_blank" rel="noreferrer" class="social-link" aria-label="linkedin">
+  <svg class="tf-social" aria-hidden="true">
+    <use href="/img/bootstrap-icons.svg#linkedin"/>
+  </svg>
+  <span>linkedin</span>
+</a>
+
+          
+        </div>
+      </div>
+      <div>
+        <div class="profile-img-container">
+          <img src="https://github.com/aareno.png" class="profile-img" alt="Portrait of Aaren Orquia">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section" id="projects">
+  <div class="container px-0">
+    <h2 class="section-heading">Featured Projects</h2>
+
+    <div class="projects-grid">
+      
+      
+        
+          <article class="project-card">
+  <div class="project-image">
+    <img src="/img/logo2.jpg" alt="Seen preview" loading="lazy">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Seen</h3>
+    <p class="project-description">A mobile application enabling users to create and manage watchlists for TV shows.</p>
+    <div class="project-technologies">
+      
+        <span class="tech-tag">Java</span>
+      
+        <span class="tech-tag">SQLite</span>
+      
+        <span class="tech-tag">XML</span>
+      
+    </div>
+  </div>
+  <a href="/projects/seen.html" class="project-link" aria-label="View Seen project"></a>
+</article>
+
+        
+        
+      
+        
+          <article class="project-card">
+  <div class="project-image">
+    <img src="/img/ics.png" alt="Identifier Name IDE Plugin preview" loading="lazy">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">Identifier Name IDE Plugin</h3>
+    <p class="project-description">An IntelliJ platform plugin that visually organizes and analyzes code identifiers to improve code quality and navigation.</p>
+    <div class="project-technologies">
+      
+        <span class="tech-tag">Java</span>
+      
+        <span class="tech-tag">Kotlin</span>
+      
+        <span class="tech-tag">Gradle</span>
+      
+    </div>
+  </div>
+  <a href="/projects/name-identifier-plugin.html" class="project-link" aria-label="View Identifier Name IDE Plugin project"></a>
+</article>
+
+        
+        
+      
+        
+          <article class="project-card">
+  <div class="project-image">
+    <img src="/img/startmenu.png" alt="In the Shadows preview" loading="lazy">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">In the Shadows</h3>
+    <p class="project-description">A thrilling multiplayer horror puzzle game where players race to escape a maze while being hunted by AI monsters.</p>
+    <div class="project-technologies">
+      
+        <span class="tech-tag">Unity</span>
+      
+        <span class="tech-tag">C#</span>
+      
+        <span class="tech-tag">Multiplayer</span>
+      
+    </div>
+  </div>
+  <a href="/projects/in-the-shadows.html" class="project-link" aria-label="View In the Shadows project"></a>
+</article>
+
+        
+        
+    </div>
+
+    
+      <div class="text-center mt-5">
+        <a href="/projects/" class="view-all-link">See all 4 projects</a>
+      </div>
+    
+  </div>
+</section>
+
+
+<section id="experience">
+  <h2>Work Experience</h2>
+  
+  
+    
+      <article class="experience-item">
+        <div class="experience-header">
+          <h3>Coding AI Training <span class="company">@ Outlier</span></h3>
+          <span class="date">October 2024 – Present</span>
+        </div>
+        <p>Contributed to AI model improvement through specialzied coding prompt creation and output evaluation.</p>
+        
+          <div class="experience-responsibilities">
+            <h4 class="responsibilities-heading">Responsibilities</h4>
+            <ul class="responsibilities-list">
+              <li>Generate target prompts across multiple programming languages (Java, Python, C)</li><li>Evaluated and ranked AI-genetrated code solutions based on correctness and efficiency</li><li>Provided detailed feedback to improve AI model performance in code generation tasks</li>
+            </ul>
+          </div>
+        
+      </article>
+    
+  
+  
+</section>
+
+<section id="contact">
+  <h2>Get In Touch</h2>
+  <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hello, I'll do my best to get back to you.</p>
+  <div class="social-links">
+    
+      <a href="http://github.com/aareno" aria-label="github">
+        <svg class="tf-social"><use href="/img/bootstrap-icons.svg#github"/></svg>
+      </a>
+    
+      <a href="https://www.linkedin.com/in/aaren-orquia-2b899a23a/" aria-label="linkedin">
+        <svg class="tf-social"><use href="/img/bootstrap-icons.svg#linkedin"/></svg>
+      </a>
+    
+    <a href="mailto:aareno@hawaii.edu" aria-label="Email">
+      <svg class="tf-social"><use href="/img/bootstrap-icons.svg#envelope-fill"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer class="navbar navbar-expand navbar-dark">
+  <div class="container-fluid">
+    <div class="mx-auto text-center">
+      <div class="d-flex flex-column">
+        <small class="nav-link mb-0">Made by Aaren Orquia</small>
+        <small class="nav-link mt-0">&copy; 2026 All rights reserved</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+/* Dark theme. Simple, yet elegant. */
+
+/* Use Open Sans as the default sans serif font. */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+
+/* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
+:root {
+    --bs-font-sans-serif: "Open Sans", sans-serif;
+    --bs-link-color: #6ea8fe; /* Lighter blue for better contrast on dark */
+    --bs-blue: #6ea8fe; /* Lighter blue */
+    --bs-gray: #495057;
+    --bs-gray-100: #343a40;
+    --bs-gray-200: #2b3035;
+    --bs-gray-500: #adb5bd;
+    --bs-white: #212529; /* This will be our "card background" color */
+
+    --tf-pill-bg: #495057;
+    --tf-icon-fill: #adb5bd; /* Light gray for icons */
+    --tf-icon-hover: #f8f9fa; /* Almost white on hover */
+    --tf-page-bg-color: #121212; /* Very dark background */
+    --tf-footer-bg-color: #1a1a1a; /* Slightly lighter than page background */
+    --tf-projects-bg-color: #1e1e1e; /* Slightly lighter than footer */
+}
+
+/* Override text color for the entire site */
+body {
+    color: #e0e0e0; /* Light gray text for better readability */
+    background-color: var(--tf-page-bg-color);
+}
+
+/* Format social media icons */
+.tf-social {
+    display: inline-block;
+    fill: var(--tf-icon-fill);
+    height: 1.5em;
+    vertical-align: -.1em;
+    width: 1.5em;
+    transition: 0.2s;
+}
+
+.tf-social:hover {
+    fill: var(--tf-icon-hover);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Simplify the styling of the bottom of Essay cards. */
+.card-footer {
+    background-color: var(--bs-white); /* Will use our dark "white" */
+    border-top: none;
+}
+
+/* Additional styles for better dark theme appearance */
+.card {
+    background-color: #212529;
+    border-color: #343a40;
+}
+
+.navbar, footer {
+    background-color: var(--tf-footer-bg-color);
+}
+
+/* Ensure buttons and other elements have appropriate contrast */
+.btn-outline-dark {
+    color: #e0e0e0;
+    border-color: #6c757d;
+}
+
+.btn-outline-dark:hover {
+    color: #212529;
+    background-color: #e0e0e0;
+}
